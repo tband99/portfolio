@@ -1,21 +1,16 @@
-# Thomas Anderson - Portfolio Website
+# Thomas Anderson - Portfolio Website (Modern Dark)
 
-This is my personal portfolio site built with a Modern Dark theme.
+Files included:
+- index.html (Home)
+- projects.html (Projects overview)
+- project1.html..project6.html (Detail pages)
+- Thomas Anderson Resume.pdf
+- styles.css
+- Starter images (replaceable)
 
-## Files
-- `index.html` - Main portfolio site
-- `resume.pdf` - My résumé
-- Project images (starter images included)
-
-## How to Publish with GitHub Pages
-1. Create a new GitHub repository (name it `portfolio` or anything you like).
-2. Upload all files from this folder (index.html, resume.pdf, and project images).
-3. Commit changes to the `main` branch.
-4. Go to **Settings > Pages** in your repository.
-5. Under **Source**, choose `Deploy from a branch`.
-6. Select `main` branch and `/root` folder, then save.
-7. Your portfolio will be live at:  
-   `https://yourusername.github.io/your-repository-name/`
-
----
-Built with ❤️ by Thomas Anderson
+To publish with GitHub Pages:
+1. Create or open a GitHub repository.
+2. Upload all files from this folder.
+3. Commit to main branch.
+4. Settings → Pages → Deploy from a branch → main → / (root).
+5. Wait a minute and visit: https://USERNAME.github.io/REPO/
