@@ -1,61 +1,118 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thomas Anderson — Projects</title>
-<style>
-:root { --c-bg:#0f1115; --c-elev:#171923; --c-text:#eaeaea; --c-sub:#b9c0d0; --c-accent:#7aa2f7; }
-*{box-sizing:border-box}
-body{margin:0;background:var(--c-bg);color:var(--c-text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-a{color:var(--c-accent);text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-nav.site-nav{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.85);backdrop-filter:blur(6px);border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
-nav .brand a{font-weight:700;color:var(--c-text)}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-nav ul a{color:var(--c-text)}
-footer.site-footer{padding:28px 24px;border-top:1px solid #222;color:var(--c-sub);text-align:center;margin-top:40px}
-h1,h2,h3{margin:0 0 12px 0}
-.section{margin:28px 0}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.card{background:var(--c-elev);border:1px solid #222;border-radius:12px;overflow:hidden}
-.card img{display:block;width:100%;height:180px;object-fit:cover}
-.card .pad{padding:14px}
-.btn{display:inline-block;padding:10px 14px;border:1px solid #333;border-radius:8px}
-.hero{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
-.hero img{width:260px;height:auto;border-radius:8px;border:1px solid #222}
-.meta{color:var(--c-sub)}
-.embed{position:relative;padding-top:56.25%}
-.embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-hr{border:none;border-top:1px solid #222;margin:24px 0}
-.top-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-</style>
-</head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Thomas Anderson</title>
+  <style>
+    body {
+      background-color: #0b0b0d;
+      color: #f5f5f5;
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1.5em;
+    }
+    header {
+      background: #141418;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #4da6ff;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background-color: #18181c;
+      border-radius: 10px;
+      padding: 1.5em;
+      text-align: left;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    }
+    .card h2 {
+      color: #4da6ff;
+      margin-bottom: 0.5em;
+    }
+    .card p {
+      line-height: 1.6;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1em;
+      color: #4da6ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #141418;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thomas Anderson</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="CV%20Thomas%20Anderson.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
 
-<nav class="site-nav">
-  <div class="brand"><a href="projects.html">Thomas Anderson</a></div>
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a target="_blank" href="CV Thomas Anderson.pdf">CV</a></li>
-  </ul>
-</nav>
-
-<div class="container">
-  <div class="section">
-    <h1>Projects</h1>
-    <p class="meta">Featured work in autonomy, controls, and mechatronics</p>
-  </div>
-
-  <div class="top-row">
-    <div class="card"><img src="uav_path_planning.png" alt="Autonomous Drone Project"><div class="pad"><h3>Autonomous Drone Project</h3><p>Self-directed project to develop practical skills in autonomous systems by modifying an FPV drone to run ArduPilot. Teaching myself ROS and Gazebo for simulation-based development of autonomous behaviors. Working toward implementing obstacle detection algorithms with future goals of integrating computer vision for perception and navigation</p><a class="btn" href="project1.html">Learn More</a></div></div>
-    <div class="card"><img src="uav_path_planning.png" alt="CubeSat ADCS Development"><div class="pad"><h3>CubeSat ADCS Development</h3><p>Developing attitude determination and control system (ADCS) for a modular CubeSat platform designed to enable annual missions with interchangeable payloads. Leading early-phase MATLAB simulation development integrating IMU, magnetometer, sun sensor, and star tracker data for attitude estimation and control. Contributing to a scalable architecture that allows future teams to focus on mission-specific payloads while leveraging established control infrastructure.</p><a class="btn" href="project2.html">Learn More</a></div></div>
-    <div class="card"><img src="uav_path_planning.png" alt="Autonomous UAV Control and Path Planning"><div class="pad"><h3>Autonomous UAV Control and Path Planning</h3><p>Implemented and optimized an RRT algorithm for autonomous UAV navigation; improved path efficiency via dynamic tree restructuring and neighbor-based optimization. Built and tested a full autopilot stack including modeling, control, estimation, guidance, and navigation using MATLAB in simulation and live quadcopter flight tests</p><a class="btn" href="project3.html">Learn More</a></div></div>
-  </div>
-
-  <div class="section">
-    <div class="grid">
-      <div class="card"><img src="turbo_regatta_1.png" alt="Turbo Regatta"><div class="pad"><h3>Turbo Regatta (Electric Propulsion System)</h3><p>Designed and built an electric propulsion system for pedal boats with a cross-disciplinary team; led waterproof (IP28-rated) mechanical UI/UX design and integrated ergonomic controls with digital interfaces.</p><a class="btn" href="project4.html">Learn More</a></div></div>
-      <div class="card"><img src="carnival_game.png" alt="Carnival Game"><div class="pad"><h3>Carnival Game (STEM Outreach)</h3><p>Developed a Hall effect sensor system with Arduino + IoT for real-time scoring; deployed at a STEM event for 400+ participants.</p><a class="btn" href="project5.html">Learn More</a></div></div>
-      <div class="card"><img src="mini_golf_1.png" alt="Miniature Golf Green"><div class="pad"><h3>Mechatronic Miniature Golf Green</h3><p>Designed a laser-controlled gate using Arduino and laser cutting; showcased at a STEM outreach event with 300+ attendees.</p><a class="btn" href="project6.html">Learn More</a></div></div>
+  <section class="projects">
+    <div class="card">
+      <h2>Autonomous Drone Project (In Progress)</h2>
+      <p>Self-directed project modifying a hobby-grade FPV drone with ArduPilot and ROS for autonomous navigation and obstacle avoidance.</p>
+      <a href="project1.html">Learn More →</a>
     </div>
-  </div>
-</div>
-<footer class="site-footer">© Thomas Anderson 2025</footer>
-</body></html>
+
+    <div class="card">
+      <h2>CubeSat ADCS Development (Capstone Project — In Progress)</h2>
+      <p>Developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission using NDI and MEKF algorithms.</p>
+      <a href="project2.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <h2>Autonomous UAV Control and Path Planning</h2>
+      <p>Implemented a complete autopilot stack for autonomous vehicles, focusing on RRT* path planning and control architecture in MATLAB simulations.</p>
+      <a href="project3.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <h2>Turbo Regatta (Electric Propulsion System)</h2>
+      <p>Collaborated with a cross-disciplinary team to design and build an electric propulsion system for pedal boats, competing at Engineering Design Day.</p>
+      <a href="project4.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <h2>Carnival Game (STEM Outreach)</h2>
+      <p>Developed a Hall effect sensor system integrated with Arduino and IoT to track scoring for a water cannon game used by over 400 attendees.</p>
+      <a href="project5.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <h2>Mechatronic Miniature Golf Green</h2>
+      <p>Designed and built a laser-controlled gate mechanism using Arduino and SolidWorks, showcased at a STEM outreach event.</p>
+      <a href="project6.html">Learn More →</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Thomas Anderson 2025</p>
+  </footer>
+</body>
+</html>
