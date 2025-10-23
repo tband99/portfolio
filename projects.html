@@ -1,1 +1,61 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projects — Thomas Anderson</title><link rel="stylesheet" href="styles.css"></head><body><div class="container"><nav><div class="brand"><a href="index.html" style="color:var(--text);text-decoration:none">Thomas Anderson</a></div><div class="navlinks"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="Thomas Anderson Resume.pdf" target="_blank">Résumé</a><a href="index.html#contact">Contact</a></div></nav><header class="hero"><div class="left"><h1>Projects</h1></div></header><section class="section projects-grid"><div class="card"><img src="StarterImage_IoT Project Thumbnail.png" alt=""><div class="project-title">Autonomous Drone Build (ROS, Gazebo, Ardupilot Integration) (In Progress)</div><p class="meta">Short summary — <a href="project1.html" style="color:var(--accent)">Learn more</a></p></div><div class="card"><img src="StarterImage_Science Project Thumbnail.png" alt=""><div class="project-title">CubeSat ADCS Development (NDI &amp; MEKF) (In Progress)</div><p class="meta">Short summary — <a href="project2.html" style="color:var(--accent)">Learn more</a></p></div><div class="card"><img src="StarterImage_IoT Project Thumbnail.png" alt=""><div class="project-title">Autonomous UAV Control and Path Planning</div><p class="meta">Short summary — <a href="project3.html" style="color:var(--accent)">Learn more</a></p></div><div class="card"><img src="StarterImage_STEM Project Thumbnail.png" alt=""><div class="project-title">Turbo Regatta (Electric Propulsion System)</div><p class="meta">Short summary — <a href="project4.html" style="color:var(--accent)">Learn more</a></p></div><div class="card"><img src="StarterImage_general project thumbnail.png" alt=""><div class="project-title">Carnival Game (STEM Outreach Project)</div><p class="meta">Short summary — <a href="project5.html" style="color:var(--accent)">Learn more</a></p></div><div class="card"><img src="StarterImage_Math Project Thumbnail.png" alt=""><div class="project-title">Mechatronic Miniature Golf Green</div><p class="meta">Short summary — <a href="project6.html" style="color:var(--accent)">Learn more</a></p></div></section><footer class="footer"><div>© Thomas Anderson</div><div class="meta"><a href="https://www.linkedin.com/in/thomas-b-anderson/" style="color:var(--muted)">LinkedIn</a> · <a href="mailto:tband99@gmail.com" style="color:var(--muted)">tband99@gmail.com</a></div></footer></div></body></html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thomas Anderson — Projects</title>
+<style>
+:root { --c-bg:#0f1115; --c-elev:#171923; --c-text:#eaeaea; --c-sub:#b9c0d0; --c-accent:#7aa2f7; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--c-bg);color:var(--c-text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:var(--c-accent);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+nav.site-nav{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.85);backdrop-filter:blur(6px);border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
+nav .brand a{font-weight:700;color:var(--c-text)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--c-text)}
+footer.site-footer{padding:28px 24px;border-top:1px solid #222;color:var(--c-sub);text-align:center;margin-top:40px}
+h1,h2,h3{margin:0 0 12px 0}
+.section{margin:28px 0}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--c-elev);border:1px solid #222;border-radius:12px;overflow:hidden}
+.card img{display:block;width:100%;height:180px;object-fit:cover}
+.card .pad{padding:14px}
+.btn{display:inline-block;padding:10px 14px;border:1px solid #333;border-radius:8px}
+.hero{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.hero img{width:260px;height:auto;border-radius:8px;border:1px solid #222}
+.meta{color:var(--c-sub)}
+.embed{position:relative;padding-top:56.25%}
+.embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+hr{border:none;border-top:1px solid #222;margin:24px 0}
+.top-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+</style>
+</head><body>
+
+<nav class="site-nav">
+  <div class="brand"><a href="projects.html">Thomas Anderson</a></div>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a target="_blank" href="CV Thomas Anderson.pdf">CV</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="section">
+    <h1>Projects</h1>
+    <p class="meta">Featured work in autonomy, controls, and mechatronics</p>
+  </div>
+
+  <div class="top-row">
+    <div class="card"><img src="uav_path_planning.png" alt="Autonomous Drone Project"><div class="pad"><h3>Autonomous Drone Project</h3><p>Self-directed project to develop practical skills in autonomous systems by modifying an FPV drone to run ArduPilot. Teaching myself ROS and Gazebo for simulation-based development of autonomous behaviors. Working toward implementing obstacle detection algorithms with future goals of integrating computer vision for perception and navigation</p><a class="btn" href="project1.html">Learn More</a></div></div>
+    <div class="card"><img src="uav_path_planning.png" alt="CubeSat ADCS Development"><div class="pad"><h3>CubeSat ADCS Development</h3><p>Developing attitude determination and control system (ADCS) for a modular CubeSat platform designed to enable annual missions with interchangeable payloads. Leading early-phase MATLAB simulation development integrating IMU, magnetometer, sun sensor, and star tracker data for attitude estimation and control. Contributing to a scalable architecture that allows future teams to focus on mission-specific payloads while leveraging established control infrastructure.</p><a class="btn" href="project2.html">Learn More</a></div></div>
+    <div class="card"><img src="uav_path_planning.png" alt="Autonomous UAV Control and Path Planning"><div class="pad"><h3>Autonomous UAV Control and Path Planning</h3><p>Implemented and optimized an RRT algorithm for autonomous UAV navigation; improved path efficiency via dynamic tree restructuring and neighbor-based optimization. Built and tested a full autopilot stack including modeling, control, estimation, guidance, and navigation using MATLAB in simulation and live quadcopter flight tests</p><a class="btn" href="project3.html">Learn More</a></div></div>
+  </div>
+
+  <div class="section">
+    <div class="grid">
+      <div class="card"><img src="turbo_regatta_1.png" alt="Turbo Regatta"><div class="pad"><h3>Turbo Regatta (Electric Propulsion System)</h3><p>Designed and built an electric propulsion system for pedal boats with a cross-disciplinary team; led waterproof (IP28-rated) mechanical UI/UX design and integrated ergonomic controls with digital interfaces.</p><a class="btn" href="project4.html">Learn More</a></div></div>
+      <div class="card"><img src="carnival_game.png" alt="Carnival Game"><div class="pad"><h3>Carnival Game (STEM Outreach)</h3><p>Developed a Hall effect sensor system with Arduino + IoT for real-time scoring; deployed at a STEM event for 400+ participants.</p><a class="btn" href="project5.html">Learn More</a></div></div>
+      <div class="card"><img src="mini_golf_1.png" alt="Miniature Golf Green"><div class="pad"><h3>Mechatronic Miniature Golf Green</h3><p>Designed a laser-controlled gate using Arduino and laser cutting; showcased at a STEM outreach event with 300+ attendees.</p><a class="btn" href="project6.html">Learn More</a></div></div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">© Thomas Anderson 2025</footer>
+</body></html>
