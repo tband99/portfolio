@@ -1,70 +1,129 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thomas Anderson — About</title>
-<style>
-:root { --c-bg:#0f1115; --c-elev:#171923; --c-text:#eaeaea; --c-sub:#b9c0d0; --c-accent:#7aa2f7; }
-*{box-sizing:border-box}
-body{margin:0;background:var(--c-bg);color:var(--c-text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-a{color:var(--c-accent);text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-nav.site-nav{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.85);backdrop-filter:blur(6px);border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
-nav .brand a{font-weight:700;color:var(--c-text)}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-nav ul a{color:var(--c-text)}
-footer.site-footer{padding:28px 24px;border-top:1px solid #222;color:var(--c-sub);text-align:center;margin-top:40px}
-h1,h2,h3{margin:0 0 12px 0}
-.section{margin:28px 0}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.card{background:var(--c-elev);border:1px solid #222;border-radius:12px;overflow:hidden}
-.card img{display:block;width:100%;height:180px;object-fit:cover}
-.card .pad{padding:14px}
-.btn{display:inline-block;padding:10px 14px;border:1px solid #333;border-radius:8px}
-.hero{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
-.hero img{width:260px;height:auto;border-radius:8px;border:1px solid #222}
-.meta{color:var(--c-sub)}
-.embed{position:relative;padding-top:56.25%}
-.embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-hr{border:none;border-top:1px solid #222;margin:24px 0}
-.top-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-</style>
-</head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Thomas Anderson</title>
+  <style>
+    body {
+      background-color: #0b0b0d;
+      color: #f5f5f5;
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1.5em;
+    }
+    header {
+      background: #141418;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #4da6ff;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .headshot {
+      flex: 1 1 250px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .headshot img {
+      border-radius: 8px;
+      width: 250px;
+      height: auto;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .bio {
+      flex: 2 1 500px;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #4da6ff;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background-color: #141418;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thomas Anderson</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="CV%20Thomas%20Anderson.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
 
-<nav class="site-nav">
-  <div class="brand"><a href="projects.html">Thomas Anderson</a></div>
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a target="_blank" href="CV Thomas Anderson.pdf">CV</a></li>
-  </ul>
-</nav>
-
-<div class="container">
-  <div class="hero section">
-    <img src="headshot.jpg" alt="Thomas Anderson headshot">
-    <div>
-      <h1>About</h1>
-      <p class="meta">Mechanical Engineering Senior | GNC, Autonomy, and Mechatronics</p>
-      <p>I’m a <strong>Mechanical Engineering senior at Utah Tech University</strong>, passionate about autonomous systems, controls, and the intersection of mechanical and software design. My experience spans mechanical design, prototyping, and systems integration across aerospace, defense, and mechatronics applications. I’ve contributed to UAV development, CubeSat simulation, and cross-disciplinary projects that blend hardware and algorithm design. I’m especially interested in <strong>Guidance, Navigation, and Control (GNC)</strong> and how emerging automation technologies can advance the future of flight and space systems.</p>
-      <p><a class="btn" target="_blank" href="CV Thomas Anderson.pdf">View CV</a> &nbsp; <a class="btn" target="_blank" href="https://www.linkedin.com/in/thomas-b-anderson/">LinkedIn</a></p>
+  <section class="content">
+    <div class="headshot">
+      <img src="headshot.jpeg.jpg" alt="Thomas Anderson Headshot">
     </div>
-  </div>
-  <div class="section">
-    <h2>Experience</h2>
-    <p><strong>UAV Technician Intern — Vector</strong> · Jul 2025 – Aug 2025 · Draper, Utah<br>Assembled and integrated military-grade quadcopter UAV systems; conducted flight testing and post-flight analysis; collaborated to refine prototypes for manufacturability.</p>
-    <p><strong>Mechanical Engineering Intern — Wilson Connectivity</strong> · May 2023 – Jan 2025 · St. George, Utah<br>SolidWorks design for durable antenna mounts; designed PCB/booster test fixtures; rapid prototyping (3D printing, CNC, shop tools).</p>
-    <p><strong>Materials Intern — RAM Aviation, Space & Defense</strong> · May 2022 – Aug 2022 · St. George, Utah<br>Cost analysis and reduction initiatives; optimized pneumatics assembly; assembled multi-part kits to support production.</p>
-  </div>
-  <div class="section">
+
+    <div class="bio">
+      <h2>About Me</h2>
+      <p>I’m a <strong>Mechanical Engineering senior at Utah Tech University</strong>, passionate about autonomous systems, controls, and the intersection of mechanical and software design. My experience spans mechanical design, prototyping, and systems integration across aerospace, defense, and mechatronics applications.</p>
+      <p>I’ve contributed to UAV development, CubeSat simulation, and cross-disciplinary engineering projects that merge modeling, algorithm development, and hands-on fabrication. My current focus is on Guidance, Navigation, and Control (GNC) and how emerging automation technologies can advance the future of flight and space systems.</p>
+    </div>
+  </section>
+
+  <section style="max-width: 1000px; margin: auto; padding: 2rem;">
     <h2>Education</h2>
-    <p><strong>B.S. Mechanical Engineering</strong> — Utah Tech University, <span class="meta">Expected May 2026</span> · <span class="meta">INSPIRE Scholar (NSF)</span></p>
-  </div>
-  <div class="section">
+    <ul>
+      <li><strong>B.S. Mechanical Engineering</strong> — Utah Tech University (Expected May 2026)</li>
+      <li>INSPIRE Scholar, National Science Foundation</li>
+    </ul>
+
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Mechanical Engineering Intern</strong> — Wilson Connectivity (May 2023 – Jan 2025)<br>
+        Designed test fixtures and mechanical improvements in SolidWorks, improving durability and testing efficiency.</li>
+      <li><strong>Materials Intern</strong> — RAM Aviation Space and Defense (May – Aug 2022)<br>
+        Conducted cost reduction and process optimization within pneumatics assembly operations.</li>
+      <li><strong>UAV Technician Intern</strong> — Vector (Jul – Aug 2025)<br>
+        Assembled and tested military-grade UAV systems, improving build reliability and performance validation workflows.</li>
+    </ul>
+
     <h2>Skills</h2>
-    <p>Design & Simulation: SolidWorks, OnShape, Fusion 360, ANSYS, ROS<br>Fabrication: Laser Cutting, 3D Printing, CNC Machining/Operations, Manual Mill/Lathe, Soldering, Welding<br>Programming: MATLAB, Arduino</p>
-  </div>
-  <div class="section">
+    <ul>
+      <li><strong>Design Software:</strong> SolidWorks, Fusion 360, OnShape, ANSYS</li>
+      <li><strong>Fabrication:</strong> Laser Cutting, 3D Printing, CNC Machining, Welding</li>
+      <li><strong>Programming:</strong> MATLAB, Arduino, ROS</li>
+    </ul>
+
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:tband99@gmail.com">tband99@gmail.com</a> &nbsp;|&nbsp; LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/thomas-b-anderson/">https://www.linkedin.com/in/thomas-b-anderson/</a></p>
-  </div>
-</div>
-<footer class="site-footer">© Thomas Anderson 2025</footer>
-</body></html>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:tband99@gmail.com" style="color:#4da6ff;">tband99@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thomas-b-anderson/" style="color:#4da6ff;">linkedin.com/in/thomas-b-anderson</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© Thomas Anderson 2025</p>
+  </footer>
+</body>
+</html>
