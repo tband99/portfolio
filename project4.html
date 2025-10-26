@@ -1,37 +1,119 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Turbo Regatta — Thomas Anderson</title>
-<style>
-:root { --c-bg:#0f1115; --c-elev:#171923; --c-text:#eaeaea; --c-sub:#b9c0d0; --c-accent:#7aa2f7; }
-*{box-sizing:border-box}
-body{margin:0;background:var(--c-bg);color:var(--c-text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-a{color:var(--c-accent);text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-nav.site-nav{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.85);backdrop-filter:blur(6px);border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
-nav .brand a{font-weight:700;color:var(--c-text)}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-nav ul a{color:var(--c-text)}
-footer.site-footer{padding:28px 24px;border-top:1px solid #222;color:var(--c-sub);text-align:center;margin-top:40px}
-h1,h2,h3{margin:0 0 12px 0}
-.section{margin:28px 0}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.card{background:var(--c-elev);border:1px solid #222;border-radius:12px;overflow:hidden}
-.card img{display:block;width:100%;height:180px;object-fit:cover}
-.card .pad{padding:14px}
-.btn{display:inline-block;padding:10px 14px;border:1px solid #333;border-radius:8px}
-.hero{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
-.hero img{width:260px;height:auto;border-radius:8px;border:1px solid #222}
-.meta{color:var(--c-sub)}
-.embed{position:relative;padding-top:56.25%}
-.embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-hr{border:none;border-top:1px solid #222;margin:24px 0}
-.top-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-</style>
-</head><body>
-<nav class="site-nav">
-  <div class="brand"><a href="projects.html">Thomas Anderson</a></div>
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a target="_blank" href="CV Thomas Anderson.pdf">CV</a></li>
-  </ul>
-</nav>
-<div class='container'><h1>Turbo Regatta (Electric Propulsion System)</h1><div class='grid' style='grid-template-columns:repeat(auto-fit,minmax(320px,1fr))'><img src='turbo_regatta_1.png'><img src='turbo_regatta_2.png'></div><p class='section'>Designed and built an electric propulsion system for pedal boats with a cross-disciplinary team; led waterproof (IP28-rated) mechanical UI/UX design and integrated ergonomic controls with digital interfaces.</p><div class='section'><h2>LinkedIn Post</h2><div style='max-width:504px;margin:0 auto;'><iframe src='https://www.linkedin.com/embed/feed/update/urn:li:activity:7321583715074129920' height='700' width='504' frameborder='0' allowfullscreen title='LinkedIn Post'></iframe></div></div><div class='section'><a class='btn' href='projects.html'>← Back to Projects</a></div></div><footer class="site-footer">© Thomas Anderson 2025</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo Regatta | Thomas Anderson</title>
+  <style>
+    body {
+      background-color: #0b0b0d;
+      color: #f5f5f5;
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1.5em;
+    }
+    header { background: #141418; }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #4da6ff; }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+    h1 { color: #4da6ff; text-align: center; }
+    h2 { color: #4da6ff; margin-top: 1.5rem; }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .images img {
+      width: 48%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    @media (max-width: 700px) {
+      .images img { width: 100%; }
+    }
+    iframe {
+      display: block;
+      margin: 2rem auto;
+      border: none;
+      width: 504px;
+      height: 399px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    ul { padding-left: 20px; }
+    footer {
+      background-color: #141418;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thomas Anderson</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="CV%20Thomas%20Anderson.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Turbo Regatta (Electric Propulsion System)</h1>
+    <p><em>Associated with Utah Tech University | Engineering Design Day</em></p>
+
+    <div class="images">
+      <img src="turbo_regatta_1.png" alt="Turbo Regatta prototype">
+      <img src="turbo_regatta_2.png" alt="Turbo Regatta propulsion system">
+    </div>
+
+    <h2>Project Overview</h2>
+    <p>Collaborated in a cross-disciplinary engineering team to design and build an electric propulsion system for pedal boats, successfully competing against peer designs on Engineering Design Day.</p>
+
+    <h2>My Role & Contributions</h2>
+    <ul>
+      <li>Led UI/UX mechanical design for the control system, creating waterproof housings (IP28-rated) for electronic components</li>
+      <li>Worked directly with Computer Engineering teammates to ensure seamless integration between physical controls and digital interfaces</li>
+      <li>Designed and fabricated ergonomic controls mounted to the boat’s center console, optimizing user experience while meeting waterproofing requirements</li>
+      <li>Managed wire routing and enclosure development for all user interface elements while maintaining design integrity</li>
+    </ul>
+
+    <h2>Project Highlights</h2>
+    <ul>
+      <li>Cross-functional collaboration between Mechanical, Electrical, Computer, and Mechatronics engineers</li>
+      <li>Designed a propulsion system capable of variable speed control and full maneuverability (forward/reverse/turning)</li>
+      <li>Created solutions within strict constraints: $600 budget, aluminum extrusion mounting only, battery limitations</li>
+      <li>Developed a system that competed in both head-to-head races and precision maneuvering course challenges</li>
+      <li>Applied fabrication and waterproofing techniques to ensure reliability in aquatic environments</li>
+    </ul>
+
+    <p>This project strengthened my abilities in cross-disciplinary communication, waterproof design, user interface engineering, and creating solutions under real-world constraints while working with specialists across multiple engineering disciplines.</p>
+
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7321583682979340288?compact=1" title="LinkedIn Post"></iframe>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="projects.html" style="color:#4da6ff; text-decoration:none;">← Back to Projects</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© Thomas Anderson 2025</p>
+  </footer>
+</body>
+</html>
