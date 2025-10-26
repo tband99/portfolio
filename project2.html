@@ -1,37 +1,105 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>CubeSat ADCS — Thomas Anderson</title>
-<style>
-:root { --c-bg:#0f1115; --c-elev:#171923; --c-text:#eaeaea; --c-sub:#b9c0d0; --c-accent:#7aa2f7; }
-*{box-sizing:border-box}
-body{margin:0;background:var(--c-bg);color:var(--c-text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-a{color:var(--c-accent);text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-nav.site-nav{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.85);backdrop-filter:blur(6px);border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
-nav .brand a{font-weight:700;color:var(--c-text)}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-nav ul a{color:var(--c-text)}
-footer.site-footer{padding:28px 24px;border-top:1px solid #222;color:var(--c-sub);text-align:center;margin-top:40px}
-h1,h2,h3{margin:0 0 12px 0}
-.section{margin:28px 0}
-.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.card{background:var(--c-elev);border:1px solid #222;border-radius:12px;overflow:hidden}
-.card img{display:block;width:100%;height:180px;object-fit:cover}
-.card .pad{padding:14px}
-.btn{display:inline-block;padding:10px 14px;border:1px solid #333;border-radius:8px}
-.hero{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
-.hero img{width:260px;height:auto;border-radius:8px;border:1px solid #222}
-.meta{color:var(--c-sub)}
-.embed{position:relative;padding-top:56.25%}
-.embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-hr{border:none;border-top:1px solid #222;margin:24px 0}
-.top-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-</style>
-</head><body>
-<nav class="site-nav">
-  <div class="brand"><a href="projects.html">Thomas Anderson</a></div>
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a target="_blank" href="CV Thomas Anderson.pdf">CV</a></li>
-  </ul>
-</nav>
-<div class='container'><h1>CubeSat ADCS Development</h1><img src='uav_path_planning.png' style='width:100%;border-radius:8px;margin-bottom:16px;'><p>Developing attitude determination and control system (ADCS) for a modular CubeSat platform designed to enable annual missions with interchangeable payloads. Leading early-phase MATLAB simulation development integrating IMU, magnetometer, sun sensor, and star tracker data for attitude estimation and control. Contributing to a scalable architecture that allows future teams to focus on mission-specific payloads while leveraging established control infrastructure.</p><div class='section'><a class='btn' href='projects.html'>← Back to Projects</a></div></div><footer class="site-footer">© Thomas Anderson 2025</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CubeSat ADCS Development | Thomas Anderson</title>
+  <style>
+    body {
+      background-color: #0b0b0d;
+      color: #f5f5f5;
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1.5em;
+    }
+    header {
+      background: #141418;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #4da6ff;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+    h1 {
+      color: #4da6ff;
+      text-align: center;
+    }
+    h2 {
+      color: #4da6ff;
+      margin-top: 1.5rem;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #141418;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thomas Anderson</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="CV%20Thomas%20Anderson.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>CubeSat ADCS Development (Capstone Project — In Progress)</h1>
+    <p><em>Status: Ongoing capstone project developing a modular ADCS for Utah Tech’s student CubeSat program.</em></p>
+
+    <h2>Project Overview</h2>
+    <p>Ongoing senior capstone project focused on developing a <strong>modular Attitude Determination and Control System (ADCS)</strong> for Utah Tech’s CubeSat imaging mission. The system provides 3-axis attitude control and estimation capabilities designed for reuse across future student-built satellites.</p>
+
+    <h2>Key Responsibilities</h2>
+    <ul>
+      <li>Implementing <strong>Nonlinear Dynamic Inversion (NDI)</strong> and <strong>Multiplicative Extended Kalman Filter (MEKF)</strong> algorithms for control and estimation in MATLAB</li>
+      <li>Modeling spacecraft dynamics and sensor response for accurate closed-loop simulation</li>
+      <li>Integrating IMU, magnetometer, sun sensor, and star tracker data for attitude determination</li>
+      <li>Designing and tuning control laws for reaction wheel and magnetorquer actuation</li>
+      <li>Supporting system validation through Monte Carlo simulation and 3-axis attitude testing</li>
+    </ul>
+
+    <h2>System Highlights</h2>
+    <ul>
+      <li>Modular and reusable ADCS architecture for multi-mission adaptability</li>
+      <li>High-fidelity MATLAB/Simulink simulation environment</li>
+      <li>Advanced estimation and control algorithms for precision pointing</li>
+    </ul>
+
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>MATLAB / Simulink modeling</li>
+      <li>Nonlinear Dynamic Inversion (NDI)</li>
+      <li>Multiplicative Extended Kalman Filter (MEKF)</li>
+      <li>Sensor fusion and control systems design</li>
+      <li>Spacecraft dynamics and orbital mechanics</li>
+    </ul>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="projects.html" style="color:#4da6ff; text-decoration:none;">← Back to Projects</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© Thomas Anderson 2025</p>
+  </footer>
+</body>
+</html>
