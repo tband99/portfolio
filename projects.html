@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Thomas Anderson</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Drone Project | Thomas Anderson</title>
   <style>
     body {
       background-color: #0b0b0d;
@@ -28,34 +28,29 @@
     nav a:hover {
       color: #4da6ff;
     }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      max-width: 1200px;
+    section {
+      max-width: 1000px;
       margin: auto;
+      padding: 2rem;
+      line-height: 1.7;
     }
-    .card {
-      background-color: #18181c;
-      border-radius: 10px;
-      padding: 1.5em;
-      text-align: left;
-      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
-    }
-    .card h2 {
+    h1 {
       color: #4da6ff;
-      margin-bottom: 0.5em;
+      text-align: center;
     }
-    .card p {
-      line-height: 1.6;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 1em;
+    h2 {
       color: #4da6ff;
-      text-decoration: none;
-      font-weight: bold;
+      margin-top: 1.5rem;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 1.5rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    ul {
+      padding-left: 20px;
     }
     footer {
       background-color: #141418;
@@ -73,42 +68,36 @@
     </nav>
   </header>
 
-  <section class="projects">
-    <div class="card">
-      <h2>Autonomous Drone Project (In Progress)</h2>
-      <p>Self-directed project modifying a hobby-grade FPV drone with ArduPilot and ROS for autonomous navigation and obstacle avoidance.</p>
-      <a href="project1.html">Learn More →</a>
-    </div>
+  <section>
+    <h1>Autonomous Drone Project (In Progress)</h1>
+    <p><em>Status: Actively under development — focusing on ArduPilot, ROS, and autonomous navigation systems.</em></p>
 
-    <div class="card">
-      <h2>CubeSat ADCS Development (Capstone Project — In Progress)</h2>
-      <p>Developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission using NDI and MEKF algorithms.</p>
-      <a href="project2.html">Learn More →</a>
-    </div>
+    <img src="uav_path_planning.png" alt="Autonomous Drone Project Simulation">
 
-    <div class="card">
-      <h2>Autonomous UAV Control and Path Planning</h2>
-      <p>Implemented a complete autopilot stack for autonomous vehicles, focusing on RRT* path planning and control architecture in MATLAB simulations.</p>
-      <a href="project3.html">Learn More →</a>
-    </div>
+    <h2>Project Overview</h2>
+    <p>Self-directed, ongoing project to develop practical skills in autonomous systems by modifying a <strong>hobby-grade FPV drone</strong> to operate with ArduPilot and ROS-based control software. The objective is to achieve autonomous navigation and obstacle avoidance using onboard sensors and simulation environments.</p>
 
-    <div class="card">
-      <h2>Turbo Regatta (Electric Propulsion System)</h2>
-      <p>Collaborated with a cross-disciplinary team to design and build an electric propulsion system for pedal boats, competing at Engineering Design Day.</p>
-      <a href="project4.html">Learn More →</a>
-    </div>
+    <h2>Objectives & Progress</h2>
+    <ul>
+      <li>Integrate ArduPilot firmware with ROS for high-level mission scripting and autonomous control</li>
+      <li>Develop a Gazebo-based simulation environment to safely test flight algorithms</li>
+      <li>Implement real-time obstacle detection and avoidance using onboard sensor data</li>
+      <li>Tune PID controllers for flight stability and waypoint navigation</li>
+      <li>Future work: integrate computer vision for mapping and object recognition</li>
+    </ul>
 
-    <div class="card">
-      <h2>Carnival Game (STEM Outreach)</h2>
-      <p>Developed a Hall effect sensor system integrated with Arduino and IoT to track scoring for a water cannon game used by over 400 attendees.</p>
-      <a href="project5.html">Learn More →</a>
-    </div>
+    <h2>Tools & Skills</h2>
+    <ul>
+      <li>ROS, Gazebo, and ArduPilot</li>
+      <li>PID control tuning and sensor calibration</li>
+      <li>IMU, GPS, and LiDAR integration</li>
+      <li>Simulation-based testing</li>
+      <li>Autonomous navigation and control systems</li>
+    </ul>
 
-    <div class="card">
-      <h2>Mechatronic Miniature Golf Green</h2>
-      <p>Designed and built a laser-controlled gate mechanism using Arduino and SolidWorks, showcased at a STEM outreach event.</p>
-      <a href="project6.html">Learn More →</a>
-    </div>
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="projects.html" style="color:#4da6ff; text-decoration:none;">← Back to Projects</a>
+    </p>
   </section>
 
   <footer>
