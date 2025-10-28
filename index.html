@@ -5,45 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thomas Anderson — Portfolio</title>
 <style>
-:root {
-  --navy1:#0a1128; --navy2:#001f4d; --text:#eaeaea; --cyan:#2EA8FF; --card:#0e1633;
-}
-body {
-  margin:0; font-family:'Segoe UI',Roboto,sans-serif; background:var(--navy1); color:var(--text);
-}
-header {
-  background:linear-gradient(90deg,var(--navy1),var(--navy2));
-  padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0;
-}
+:root { --navy1:#0a1128; --navy2:#001f4d; --text:#eaeaea; --cyan:#2EA8FF; --card:#0e1633; }
+body { margin:0; font-family:'Segoe UI',Roboto,sans-serif; background:var(--navy1); color:var(--text); }
+header { background:linear-gradient(90deg,var(--navy1),var(--navy2)); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; }
 header a { color:var(--cyan); text-decoration:none; margin-left:1rem; }
 .hero { text-align:center; padding:4rem 1.5rem; background:linear-gradient(120deg,var(--navy2),var(--navy1)); }
-.btn {
-  background:var(--cyan); color:#fff; border:none; padding:.65rem 1.2rem;
-  border-radius:6px; text-decoration:none; display:inline-block; margin:.25rem;
-}
+.btn { background:var(--cyan); color:#fff; border:none; padding:.65rem 1.2rem; border-radius:6px; text-decoration:none; display:inline-block; margin:.25rem; }
 main section { padding:3rem 6vw; max-width:1100px; margin:0 auto; }
-.card {
-  background:var(--card); padding:1.2rem; border-radius:10px;
-  box-shadow:0 0 12px rgba(0,0,0,.35); margin-bottom:1.4rem;
-}
+.card { background:var(--card); padding:1.2rem; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,.35); margin-bottom:1.4rem; }
 .about { display:flex; flex-wrap:wrap; align-items:center; gap:1.6rem; }
 .about img { width:260px; border-radius:0; object-fit:cover; }
-.toggle-link {
-  color:var(--cyan); text-decoration:none; font-weight:600; display:inline-block; margin:.35rem 0;
-}
+.toggle-link { color:var(--cyan); text-decoration:none; font-weight:600; display:inline-block; margin:.35rem 0; }
 .details[hidden] { display:none; }
 .carousel { overflow:hidden; position:relative; border-radius:8px; background:#071024; margin-bottom:.8rem; }
 .carousel .track { display:flex; transition:transform .35s ease; width:100%; }
 .carousel .slide { flex:0 0 100%; display:flex; justify-content:center; align-items:center; }
 .carousel img { width:100%; object-fit:contain; }
-.carousel .nav {
-  position:absolute; top:50%; transform:translateY(-50%);
-  background:rgba(0,0,0,.5); color:#fff; border:none; padding:.3rem .6rem; border-radius:4px; cursor:pointer;
-}
+.carousel .nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.5); color:#fff; border:none; padding:.3rem .6rem; border-radius:4px; cursor:pointer; }
 .carousel .prev { left:8px; } .carousel .next { right:8px; }
-footer {
-  text-align:center; padding:2rem 1rem; background:#000914; color:#9cb3d9;
-}
+footer { text-align:center; padding:2rem 1rem; background:#000914; color:#9cb3d9; }
 </style>
 </head>
 <body>
@@ -77,13 +57,13 @@ footer {
 <section id="projects">
   <h2>Projects</h2>
 
+  <!-- Drone Project -->
   <div class="project card">
     <h3>Autonomous Drone Project (In Progress)</h3>
     <p>Self-directed project focused on developing autonomous flight capabilities using ArduPilot and ROS frameworks while building practical experience in controls, simulation, and sensor integration.</p>
     <a href="#!" class="toggle-link" onclick="toggleDetails('drone-details', this)">▼ Show More</a>
     <div id="drone-details" class="details" hidden>
-      <p><strong>Overview:</strong><br>
-      Self-directed project to develop practical skills in autonomous flight systems by modifying a hobby-grade FPV drone for <strong>autonomous operation</strong> using ArduPilot and ROS-based control software.</p>
+      <p><strong>Overview:</strong><br>Self-directed project to develop practical skills in autonomous flight systems by modifying a hobby-grade FPV drone for <strong>autonomous operation</strong> using ArduPilot and ROS-based control software.</p>
       <ul>
         <li>Currently developing autonomous flight capabilities on a hobby-grade FPV drone while learning ROS and ArduPilot integration.</li>
         <li>Focused on establishing a functional link between <strong>ArduPilot firmware</strong> and <strong>ROS</strong> for mission scripting and basic waypoint navigation.</li>
@@ -91,10 +71,48 @@ footer {
         <li>Next steps include <strong>PID tuning</strong> for stable flight and initial <strong>sensor integration</strong> (IMU and LiDAR) to support real-time obstacle avoidance.</li>
         <li>Long-term goal: incorporate <strong>computer vision and mapping</strong> for more advanced autonomous behaviors.</li>
       </ul>
-      <p><strong>Tools & Skills:</strong><br>
-      ROS · ArduPilot · Gazebo · PID Control · Sensor Integration · Simulation-Based Testing</p>
+      <p><strong>Tools & Skills:</strong><br>ROS · ArduPilot · Gazebo · PID Control · Sensor Integration · Simulation-Based Testing</p>
       <p><a class="btn" href="https://youtu.be/AimlG6VxbZo?si=EBCwgUN9ihbwV6xO" target="_blank">▶ Watch Flight Test</a></p>
       <a href="#!" class="toggle-link" onclick="toggleDetails('drone-details', this)">▲ Show Less</a>
+    </div>
+  </div>
+
+  <!-- ADCS Project -->
+  <div class="project card">
+    <h3>CubeSat ADCS Development (Capstone — In Progress)</h3>
+    <p>Developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission, providing 3-axis attitude control and estimation capabilities designed for reuse across future student-built satellites.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('adcs-details', this)">▼ Show More</a>
+    <div id="adcs-details" class="details" hidden>
+      <p><strong>Project Overview:</strong> Ongoing senior capstone project focused on developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission. The system provides 3-axis attitude control and estimation capabilities designed for reuse across future student-built satellites.</p>
+      <ul>
+        <li>Implementing Nonlinear Dynamic Inversion (NDI) and Multiplicative Extended Kalman Filter (MEKF) algorithms for control and estimation in MATLAB.</li>
+        <li>Modeling spacecraft dynamics and sensor response for accurate closed-loop simulation.</li>
+        <li>Integrating IMU, magnetometer, sun sensor, and star tracker data for attitude determination.</li>
+        <li>Designing and tuning control laws for reaction wheel and magnetorquer actuation.</li>
+        <li>Supporting system validation through Monte Carlo simulation and 3-axis attitude testing.</li>
+      </ul>
+      <p><strong>System Highlights:</strong><br>Modular and reusable ADCS architecture · High-fidelity MATLAB/Simulink simulation environment · Advanced estimation and control algorithms for precision pointing.</p>
+      <p><strong>Skills & Tools:</strong><br>MATLAB / Simulink · NDI · MEKF · Sensor Fusion · Spacecraft Dynamics · Control Systems Design</p>
+      <a href="#!" class="toggle-link" onclick="toggleDetails('adcs-details', this)">▲ Show Less</a>
+    </div>
+  </div>
+
+  <!-- Other Projects (Turbo, Carnival, Golf) -->
+  <div class="project card">
+    <h3>Autonomous UAV Control and Path Planning</h3>
+    
+    <div class="carousel" id="c1" data-index="0">
+      <div class="track"><div class="slide"><img src="95a557c9-d2ea-49f0-8f24-d751a9780867.png" alt=""></div></div>
+      
+    </div>
+    
+    <p>Designed and implemented a complete autopilot stack for autonomous vehicles, focusing on advanced path planning algorithms.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('uav-details', this)">▼ Show More</a>
+    <div id="uav-details" class="details" hidden>
+      <p><strong>Overview:</strong> Developed an optimized RRT* algorithm for autonomous navigation and a MATLAB-based autopilot system for path planning, state estimation, and control.</p>
+      <p><strong>Skills:</strong> Algorithm Optimization · Control Design · State Estimation · MATLAB · Autonomous Systems</p>
+      <p><a class="btn" href="https://youtu.be/AimlG6VxbZo?si=EBCwgUN9ihbwV6xO" target="_blank">▶ Watch Flight Test</a></p>
+      <a href="#!" class="toggle-link" onclick="toggleDetails('uav-details', this)">▲ Show Less</a>
     </div>
   </div>
 
@@ -110,8 +128,14 @@ footer {
     
     </div>
     
-    <p>Collaborated in a cross-disciplinary engineering team to design and build an electric propulsion system for pedal boats, successfully competing against peer designs on Engineering Design Day.</p>
-    <p><a class="btn" href="https://www.linkedin.com/posts/utah-tech-engineering_thanks-to-everyone-who-helped-make-discovery-activity-7321583715074129920-wWn6" target="_blank">▶ Watch Turbo Regatta Demo</a></p>
+    <p>Collaborated in a cross-disciplinary engineering team to design and build an electric propulsion system for pedal boats.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('turbo-details', this)">▼ Show More</a>
+    <div id="turbo-details" class="details" hidden>
+      <p>Led UI/UX mechanical design for the control system, creating waterproof housings for electronics and ensuring integration between physical controls and digital interfaces.</p>
+      <p>Designed ergonomic controls and managed enclosure development for reliable operation in aquatic environments under strict constraints.</p>
+      <p><a class="btn" href="https://www.linkedin.com/posts/utah-tech-engineering_thanks-to-everyone-who-helped-make-discovery-activity-7321583715074129920-wWn6" target="_blank">▶ Watch Turbo Regatta Demo</a></p>
+      <a href="#!" class="toggle-link" onclick="toggleDetails('turbo-details', this)">▲ Show Less</a>
+    </div>
   </div>
 
   <div class="project card">
@@ -122,7 +146,13 @@ footer {
       
     </div>
     
-    <p>Developed a Hall effect sensor system to track scoring in a water cannon game; integrated multiple sensors with Arduino and IoT for real-time scoreboard updates; played by over 400 attendees in a STEM outreach event.</p>
+    <p>Developed a Hall effect sensor system to track scoring in a water cannon game for a STEM outreach event.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('carnival-details', this)">▼ Show More</a>
+    <div id="carnival-details" class="details" hidden>
+      <p>Integrated multiple sensors with Arduino and IoT to enable real-time scoreboard updates. Over 400 attendees interacted with the project during a university outreach event.</p>
+      <p><strong>Skills:</strong> Arduino · IoT · Sensor Calibration · 3D Printing · SOLIDWORKS</p>
+      <a href="#!" class="toggle-link" onclick="toggleDetails('carnival-details', this)">▲ Show Less</a>
+    </div>
   </div>
 
   <div class="project card">
@@ -137,19 +167,19 @@ footer {
     
     </div>
     
-    <p>Designed and built a laser-controlled gate using an Arduino, SolidWorks, and laser cutting for a bridge mechanism; played by over 300 attendees in a STEM outreach event.</p>
+    <p>Designed and built a laser-controlled gate using Arduino and SolidWorks for an interactive mini-golf bridge mechanism.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('golf-details', this)">▼ Show More</a>
+    <div id="golf-details" class="details" hidden>
+      <p>Used laser cutting and mechatronic design to create a reliable gate control system for a STEM outreach event, engaging over 300 participants.</p>
+      <p><strong>Skills:</strong> Arduino · Laser Cutting · SOLIDWORKS · Mechatronics</p>
+      <a href="#!" class="toggle-link" onclick="toggleDetails('golf-details', this)">▲ Show Less</a>
+    </div>
   </div>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="card">B.S. Mechanical Engineering — Utah Tech University, Expected May 2026</div>
-</section>
+<section id="education"><h2>Education</h2><div class="card">B.S. Mechanical Engineering — Utah Tech University, Expected May 2026</div></section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="card">SolidWorks · ROS · MATLAB · 3D Printing · CNC Machining · PID Control · Sensor Integration</div>
-</section>
+<section id="skills"><h2>Skills</h2><div class="card">SolidWorks · ROS · MATLAB · 3D Printing · CNC Machining · PID Control · Sensor Integration</div></section>
 
 <section id="contact">
   <h2>Contact</h2>
