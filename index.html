@@ -3,71 +3,375 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Thomas Anderson — Mechanical Engineering Student | Focused on GNC | Exploring the Future of Autonomous Flight">
 <title>Thomas Anderson — Portfolio</title>
 <style>
-:root { --navy1:#0a1128; --navy2:#001f4d; --text:#eaeaea; --cyan:#2EA8FF; --card:#0e1633; }
-body { margin:0; font-family:'Segoe UI',Roboto,sans-serif; background:var(--navy1); color:var(--text); }
-header { background:linear-gradient(90deg,var(--navy1),var(--navy2)); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; }
-header a { color:var(--cyan); text-decoration:none; margin-left:1rem; }
-.hero { text-align:center; padding:4rem 1.5rem; background:linear-gradient(120deg,var(--navy2),var(--navy1)); }
-.btn { background:var(--cyan); color:#fff; border:none; padding:.65rem 1.2rem; border-radius:6px; text-decoration:none; display:inline-block; margin:.25rem; }
-main section { padding:3rem 6vw; max-width:1100px; margin:0 auto; }
-.card { background:var(--card); padding:1.2rem; border-radius:10px; box-shadow:0 0 12px rgba(0,0,0,.35); margin-bottom:1.4rem; }
-.about { display:flex; flex-wrap:wrap; align-items:center; gap:1.6rem; }
-.about img { width:260px; border-radius:0; object-fit:cover; }
-.toggle-link { color:var(--cyan); text-decoration:none; font-weight:600; display:inline-block; margin:.35rem 0; }
-.details[hidden] { display:none; }
-.carousel { overflow:hidden; position:relative; border-radius:8px; background:#071024; margin-bottom:.8rem; }
-.carousel .track { display:flex; transition:transform .35s ease; width:100%; }
-.carousel .slide { flex:0 0 100%; display:flex; justify-content:center; align-items:center; }
-.carousel img { width:100%; object-fit:contain; }
-.carousel .nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.5); color:#fff; border:none; padding:.3rem .6rem; border-radius:4px; cursor:pointer; }
-.carousel .prev { left:8px; } .carousel .next { right:8px; }
-footer { text-align:center; padding:2rem 1rem; background:#000914; color:#9cb3d9; }
+  :root { --navy1:#0a1128; --navy2:#001f4d; --text:#eaeaea; --muted:#9cb3d9; --cyan:#2EA8FF; --cyan2:#4CC3FF; --card:#0e1633; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--navy1); color:var(--text); font-family:'Segoe UI', Roboto, sans-serif; }
+  header { background:linear-gradient(90deg,var(--navy1),var(--navy2)); padding:1rem 2rem; position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; }
+  header .brand { font-weight:600; }
+  header nav a { color:var(--cyan); text-decoration:none; margin-left:1rem; }
+  header nav a:hover { color:var(--cyan2); }
+  .hero { background:linear-gradient(120deg,var(--navy2),var(--navy1)); text-align:center; padding:4rem 1.5rem; }
+  .hero h1 { margin:.2rem 0 .5rem; }
+  .hero p { color:var(--muted); }
+  .btn { background:var(--cyan); color:#fff; border:none; padding:.65rem 1.2rem; border-radius:6px; text-decoration:none; display:inline-block; margin:.2rem .3rem; }
+  .btn:hover { background:var(--cyan2); }
+  main section { padding:3rem 6vw; max-width:1100px; margin:0 auto; }
+  section h2 { margin-bottom:1rem; }
+  .card { background:var(--card); border-radius:10px; padding:1.2rem; box-shadow:0 0 12px rgba(0,0,0,.35); margin-bottom:1.4rem; }
+  /* About */
+  .about { display:flex; flex-wrap:wrap; gap:1.6rem; align-items:center; }
+  .about .photo { flex:0 0 260px; display:flex; justify-content:center; }
+  .about .photo img { width:260px; height:auto; border-radius:0; object-fit:cover; }
+  .about .text { flex:1 1 300px; min-width:260px; }
+  /* Projects */
+  .project h3 { margin-top:0; }
+  .badge { background:#2EA8FF22; color:var(--cyan); border:1px solid #2EA8FF55; padding:2px 8px; border-radius:10px; font-size:.78rem; margin-left:6px; }
+  .summary { color:var(--text); }
+  .toggle-link { color:var(--cyan); text-decoration:none; font-weight:600; display:inline-block; margin:.35rem 0; }
+  .toggle-link:hover { color:var(--cyan2); }
+  /* Animated details */
+  .details { transition: height .3s ease; }
+  .details-inner { padding-top:.5rem; }
+  /* Carousel */
+  .carousel { position:relative; overflow:hidden; border-radius:8px; background:#071024; margin-bottom:.8rem; }
+  .carousel .track { display:flex; width:100%; transition: transform .35s ease; }
+  .carousel .slide { flex:0 0 100%; min-width:100%; display:flex; align-items:center; justify-content:center; }
+  .carousel .slide img { width:100%; height:auto; object-fit:contain; display:block; }
+  .carousel .nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.5); color:#fff; border:none; padding:.25rem .6rem; border-radius:4px; cursor:pointer; }
+  .carousel .prev { left:8px; } .carousel .next { right:8px; }
+  footer { text-align:center; padding:2rem 1rem; color:var(--muted); background:#000914; margin-top:2rem; }
+  @media (max-width:720px) { .about .photo { flex-basis:100%; } .about .text { flex-basis:100%; } }
 </style>
 </head>
 <body>
 <header>
-  <div>Thomas Anderson</div>
+  <div class="brand">Thomas Anderson</div>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
+
 <section class="hero">
   <h1>Hi, I’m Thomas Anderson</h1>
   <p>Mechanical Engineering Student | Focused on GNC | Exploring the Future of Autonomous Flight</p>
   <a class="btn" href="#projects">See Projects</a>
-  <a class="btn" href="https://www.linkedin.com/in/thomas-b-anderson" target="_blank">LinkedIn</a>
+  <a class="btn" href="https://www.linkedin.com/in/thomas-b-anderson" target="_blank" rel="noopener">LinkedIn</a>
 </section>
+
 <main>
-<!-- content omitted for brevity (same as above) -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="about card">
+      <div class="photo"><img src="headshot.jpg" alt="Thomas Anderson headshot"></div>
+      <div class="text"><p>I’m a Mechanical Engineering senior at Utah Tech University, passionate about autonomous systems, controls, and the intersection of mechanical and software design. My experience spans mechanical design, prototyping, and systems integration across aerospace, defense, and mechatronics applications. I’ve contributed to UAV development, CubeSat simulation, and cross-disciplinary engineering projects that merge modeling, algorithm development, and hands-on fabrication. My current focus is on Guidance, Navigation, and Control (GNC) and how emerging automation technologies can advance the future of flight and space systems.</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project card">
+      <h3>Autonomous Drone Project <span class="badge">In Progress</span></h3>
+      
+    <p class="summary">Modifying a hobby FPV drone to run ArduPilot + ROS for autonomous navigation with onboard sensing and simulation.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d1', this)">▼ Show More</a>
+    <div id="d1" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
+<strong>Project Overview</strong><br>
+Self-directed, ongoing project to develop practical skills in autonomous systems by modifying a hobby-grade FPV drone to operate with ArduPilot and ROS-based control software. The objective is to achieve autonomous navigation and obstacle avoidance using onboard sensors and simulation environments.
+<br><br>
+<strong>Objectives & Progress</strong>
+<ul>
+  <li>Integrate ArduPilot firmware with ROS for high-level mission scripting and autonomous control</li>
+  <li>Develop a Gazebo-based simulation environment to safely test flight algorithms</li>
+  <li>Implement real-time obstacle detection and avoidance using onboard sensor data</li>
+  <li>Tune PID controllers for flight stability and waypoint navigation</li>
+  <li>Future work: integrate computer vision for mapping and object recognition</li>
+</ul>
+<strong>Tools & Skills</strong>
+<ul>
+  <li>ROS, Gazebo, ArduPilot</li>
+  <li>PID control tuning and sensor calibration</li>
+  <li>IMU, GPS, and LiDAR integration</li>
+  <li>Simulation-based testing</li>
+  <li>Autonomous navigation and control systems</li>
+</ul>
+
+      </div>
+    </div>
+    
+    </div>
+
+    <div class="project card">
+      <h3>CubeSat ADCS Development (Capstone) <span class="badge">In Progress</span></h3>
+      
+    <p class="summary">Reusable 3‑axis ADCS stack (NDI + MEKF) for Utah Tech’s imaging CubeSat with high‑fidelity MATLAB/Simulink simulation.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d2', this)">▼ Show More</a>
+    <div id="d2" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
+<strong>Project Overview</strong><br>
+Ongoing senior capstone project focused on developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission. The system provides 3-axis attitude control and estimation capabilities designed for reuse across future student-built satellites.
+<br><br>
+<strong>Key Responsibilities</strong>
+<ul>
+  <li>Implementing Nonlinear Dynamic Inversion (NDI) and Multiplicative Extended Kalman Filter (MEKF) algorithms for control and estimation in MATLAB</li>
+  <li>Modeling spacecraft dynamics and sensor response for accurate closed-loop simulation</li>
+  <li>Integrating IMU, magnetometer, sun sensor, and star tracker data for attitude determination</li>
+  <li>Designing and tuning control laws for reaction wheel and magnetorquer actuation</li>
+  <li>Supporting system validation through Monte Carlo simulation and 3-axis attitude testing</li>
+</ul>
+<strong>System Highlights</strong>
+<ul>
+  <li>Modular and reusable ADCS architecture for multi-mission adaptability</li>
+  <li>High-fidelity MATLAB/Simulink simulation environment</li>
+  <li>Advanced estimation and control algorithms for precision pointing</li>
+</ul>
+<strong>Skills & Tools</strong>
+<ul>
+  <li>MATLAB / Simulink modeling</li>
+  <li>Nonlinear Dynamic Inversion (NDI)</li>
+  <li>Multiplicative Extended Kalman Filter (MEKF)</li>
+  <li>Sensor fusion and control systems design</li>
+  <li>Spacecraft dynamics and orbital mechanics</li>
+</ul>
+
+      </div>
+    </div>
+    
+    </div>
+
+    <div class="project card">
+      <h3>Autonomous UAV Control and Path Planning</h3>
+      
+    <div class="carousel" id="c1" data-index="0">
+      <div class="track"><div class="slide"><img src="95a557c9-d2ea-49f0-8f24-d751a9780867.png" alt=""></div></div>
+      
+    </div>
+    
+      
+    <p class="summary">Implemented RRT* path planning and a full MATLAB autopilot stack; validated in simulation and flight.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d3', this)">▼ Show More</a>
+    <div id="d3" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
+<strong>Project Overview</strong><br>
+Designed and implemented a complete autopilot stack for autonomous vehicles, with particular focus on advanced path planning algorithms.
+<br><br>
+<strong>Key Accomplishments</strong>
+<ul>
+  <li>Enhanced basic RRT (Rapidly-exploring Random Tree) by implementing RRT*, an optimized version that produces more efficient paths for autonomous navigation</li>
+  <li>Developed a MATLAB implementation that continuously optimizes paths rather than just finding feasible routes</li>
+  <li>Added intelligent node selection and path rewiring capabilities that decreases total path length</li>
+  <li>Successfully demonstrated path optimization in complex environments with obstacles</li>
+</ul>
+<strong>Full Autopilot Stack Implementation</strong>
+<ul>
+  <li>Wrote MATLAB code for the entire autopilot system architecture</li>
+  <li>Implemented system modeling component to accurately simulate vehicle dynamics in 3D space</li>
+  <li>Designed and coded control laws including PID controllers for attitude and position control</li>
+  <li>Developed state estimation algorithms to process and fuse multiple sensor inputs for accurate positioning</li>
+  <li>Created guidance systems to translate high-level commands into executable trajectories</li>
+  <li>Built navigation systems that integrate with the optimized path planning algorithms</li>
+  <li>Tested the complete system in simulation and validated performance on multi-rotor platforms</li>
+</ul>
+<strong>Skills Demonstrated</strong>
+<ul>
+  <li>Algorithm development and optimization</li>
+  <li>Control systems design</li>
+  <li>State estimation and sensor fusion</li>
+  <li>Simulation and testing methodologies</li>
+  <li>MATLAB programming and system integration</li>
+  <li>Autonomous systems architecture</li>
+  <li>Real-time system performance analysis</li>
+</ul>
+
+      </div>
+    </div>
+    
+      <p><a class="btn" target="_blank" rel="noopener" href="https://youtu.be/AimlG6VxbZo?si=EBCwgUN9ihbwV6xO">▶ Watch Flight Test</a></p>
+    </div>
+
+    <div class="project card">
+      <h3>Turbo Regatta</h3>
+      
+    <div class="carousel" id="c2" data-index="0">
+      <div class="track"><div class="slide"><img src="19174b8e-23c9-4adc-8f3a-ffcafbec17e6.png" alt=""></div>
+<div class="slide"><img src="06143839-6703-4929-96b9-088a9f5b48b7.png" alt=""></div></div>
+      
+      <button class="nav prev" aria-label="Previous" onclick="carouselPrev('c2')">❮</button>
+      <button class="nav next" aria-label="Next" onclick="carouselNext('c2')">❯</button>
+    
+    </div>
+    
+      
+    <p class="summary">Electric propulsion system for pedal boats; led waterproof UI/UX mechanical design and integration.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d4', this)">▼ Show More</a>
+    <div id="d4" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
+<strong>My Role & Contributions</strong>
+<ul>
+  <li>Led UI/UX mechanical design for the control system, creating waterproof housings (IP28-rated) for electronic components</li>
+  <li>Worked directly with Computer Engineering teammates to ensure seamless integration between physical controls and digital interfaces</li>
+  <li>Designed and fabricated ergonomic controls mounted to the boat's center console, optimizing user experience while meeting waterproofing requirements</li>
+  <li>Managed wire routing and enclosure development for all user interface elements while maintaining design integrity</li>
+</ul>
+<strong>Project Highlights</strong>
+<ul>
+  <li>Cross-functional collaboration between Mechanical, Electrical, Computer, and Mechatronics engineers</li>
+  <li>Designed a propulsion system capable of variable speed control and full maneuverability (forward/reverse/turning)</li>
+  <li>Created solutions within strict constraints: $600 budget, aluminum extrusion mounting only, battery limitations</li>
+  <li>Developed a system that competed in both head-to-head races and precision maneuvering course challenges</li>
+  <li>Applied fabrication and waterproofing techniques to ensure reliability in aquatic environments</li>
+</ul>
+
+      </div>
+    </div>
+    
+      <p><a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/posts/utah-tech-engineering_thanks-to-everyone-who-helped-make-discovery-activity-7321583715074129920-wWn6?utm_source=share&utm_medium=member_desktop&rcm=ACoAACT6U-cBVx_NZenxKHfNYPTLF7ID10Bt1BA">▶ Watch Turbo Regatta Demo</a></p>
+    </div>
+
+    <div class="project card">
+      <h3>Carnival Game</h3>
+      
+    <div class="carousel" id="c3" data-index="0">
+      <div class="track"><div class="slide"><img src="4c22e8c1-0646-4f13-99f9-9b927b6d0642.png" alt=""></div></div>
+      
+    </div>
+    
+      
+    <p class="summary">Arduino + IoT Hall‑effect scoring system for a water‑cannon game used by 400+ attendees.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d5', this)">▼ Show More</a>
+    <div id="d5" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
+Developed a Hall effect sensor system to track scoring in a water cannon game; integrated multiple sensors with Arduino and IoT for real-time scoreboard updates; played by over 400 attendees in a STEM outreach event.
+<br><br>
+<strong>Skills:</strong> Arduino · Sensor Calibration · Internet of Things (IoT) · SOLIDWORKS · 3D Printing
+
+      </div>
+    </div>
+    
+    </div>
+
+    <div class="project card">
+      <h3>Mechatronic Miniature Golf Green</h3>
+      
+    <div class="carousel" id="c4" data-index="0">
+      <div class="track"><div class="slide"><img src="0c325554-dc19-45e7-9a77-b4a86339c17f.png" alt=""></div>
+<div class="slide"><img src="625e17e7-e67f-4792-98ea-a08d2cebb219.png" alt=""></div></div>
+      
+      <button class="nav prev" aria-label="Previous" onclick="carouselPrev('c4')">❮</button>
+      <button class="nav next" aria-label="Next" onclick="carouselNext('c4')">❯</button>
+    
+    </div>
+    
+      
+    <p class="summary">Laser‑controlled gate mechanism (Arduino + SolidWorks + laser cutting) showcased at a STEM outreach event.</p>
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d6', this)">▼ Show More</a>
+    <div id="d6" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
+Designed and built a laser-controlled gate using an Arduino, SolidWorks, and laser cutting for a bridge mechanism; played by over 300 attendees in a STEM outreach event.
+
+      </div>
+    </div>
+    
+    </div>
+
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <ul>
+        <li><strong>UAV Technician Intern — Vector</strong> (Jul–Aug 2025 · Draper, UT): Built and tested UAV systems; supported prototype→production transition; contributed to flight testing and post‑flight analysis.</li>
+        <li><strong>Mechanical Engineering Intern — Wilson Connectivity</strong> (May 2023–Jan 2025 · St. George, UT): Designed durable antenna mounts; developed PCB/booster test fixtures; improved testing efficiency.</li>
+        <li><strong>Race Timer — Brooksee</strong> (Mar 2022–Nov 2024): Operated RFID/BLE timing systems; supported migration from passive RFID to BLE with custom antennas.</li>
+        <li><strong>Materials Intern — RAM Aviation Space & Defense</strong> (May–Aug 2022 · St. George, UT): Optimized pneumatics assembly; contributed to cost‑reduction; assembled kits in production.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">B.S. Mechanical Engineering — Utah Tech University, Expected May 2026</div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Design & Simulation:</strong> SolidWorks, OnShape, Fusion 360, ANSYS, ROS</li>
+        <li><strong>Fabrication:</strong> Laser Cutting, 3D Printing, CNC Machining/Operations, Manual Mill, Manual Lathe, Soldering, Welding</li>
+        <li><strong>Programming:</strong> MATLAB, Arduino</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a class="btn" href="mailto:tband99@gmail.com">tband99@gmail.com</a></p>
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+      <p style="color:var(--muted); margin-top:8px;">LinkedIn: <a href="https://www.linkedin.com/in/thomas-b-anderson" target="_blank" rel="noopener" style="color:var(--cyan)">https://www.linkedin.com/in/thomas-b-anderson</a></p>
+    </div>
+  </section>
 </main>
+
 <footer>© Thomas Anderson</footer>
+
 <script>
+// ----- Expandable details with 0.3s animation -----
 function toggleDetails(id, link) {
-  const el = document.getElementById(id);
-  const hidden = el.hasAttribute('hidden');
-  if (hidden) { el.removeAttribute('hidden'); link.textContent = '▲ Show Less'; }
-  else { el.setAttribute('hidden', ''); link.textContent = '▼ Show More'; }
+  const container = document.getElementById(id);
+  const isOpen = container.getAttribute('data-open') === 'true';
+  const inner = container.querySelector('.details-inner');
+  if (!isOpen) {
+    const target = inner.scrollHeight;
+    container.style.height = target + 'px';
+    container.setAttribute('data-open','true');
+    link.textContent = '▲ Show Less';
+  } else {
+    container.style.height = '0px';
+    container.setAttribute('data-open','false');
+    link.textContent = '▼ Show More';
+  }
 }
-function getIndex(car) { return parseInt(car.getAttribute('data-index') || '0', 10); }
+window.addEventListener('resize', () => {
+  // keep height in sync when open
+  document.querySelectorAll('.details[data-open="true"]').forEach(el => {
+    const inner = el.querySelector('.details-inner');
+    el.style.height = inner.scrollHeight + 'px';
+  });
+});
+
+// ----- True horizontal carousel -----
+function getIndex(car) { return parseInt(car.getAttribute('data-index')||'0',10); }
 function setIndex(car, i) {
   const track = car.querySelector('.track');
   const slides = car.querySelectorAll('.slide');
-  if (slides.length <= 1) return;
-  if (i < 0) i = slides.length - 1;
-  if (i >= slides.length) i = 0;
+  const max = slides.length;
+  if (max <= 1) return;
+  if (i < 0) i = max - 1;
+  if (i >= max) i = 0;
   car.setAttribute('data-index', i.toString());
-  track.style.transform = 'translateX(' + (-i * 100) + '%)';
+  track.style.transform = 'translateX(' + (-i*100) + '%)';
 }
-function carouselNext(id) { const car = document.getElementById(id); setIndex(car, getIndex(car) + 1); }
-function carouselPrev(id) { const car = document.getElementById(id); setIndex(car, getIndex(car) - 1); }
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.carousel').forEach(c => setIndex(c, 0));
+function carouselNext(id) { const car = document.getElementById(id); setIndex(car, getIndex(car)+1); }
+function carouselPrev(id) { const car = document.getElementById(id); setIndex(car, getIndex(car)-1); }
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.carousel').forEach(function(car){ setIndex(car, 0); });
 });
 </script>
 </body>
