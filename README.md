@@ -1,14 +1,12 @@
-# Thomas Anderson — Portfolio (Modern Dark v4)
+Thomas Anderson — Portfolio Site v6
 
-- Blue gradient preserved, simple/static UI
-- Rectangular headshot (no border)
-- Multi-image projects use a horizontal scroll gallery
-- Video buttons on UAV Path Planning and Turbo Regatta
-- Sections linked and all placeholders replaced
-- Button text says "Download CV"
+Features:
+- Deep navy background with bright cyan accent buttons
+- Manual image carousels (no autoplay)
+- Crisp rectangular headshot (centered, optimized)
+- Unified button styling and improved readability
 
-## Publish to GitHub Pages
-1. Create a new public repo (e.g., `thomas-anderson-portfolio`).
-2. Upload all files to the root of the `main` branch.
-3. Settings → Pages → Deploy from a branch → `main` and `/ (root)`.
-4. Open `https://<your-username>.github.io/thomas-anderson-portfolio/`.
+Deploy:
+1. Upload all files to your GitHub repo.
+2. Go to Settings → Pages → Deploy from branch → main (root).
+3. Open your site URL.
