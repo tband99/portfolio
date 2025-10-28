@@ -1,12 +1,21 @@
-# Thomas Anderson — Portfolio
+# Thomas Anderson Portfolio Website
 
-Three-page structure with modern dark theme.
+This is the personal portfolio website for **Thomas Anderson**, built with the **Modern Dark Theme**.
 
-- **About** (`about.html`)
-- **Projects** (`projects.html`)
-- **CV** (`CV Thomas Anderson.pdf`)
+## 📁 Files Included
+- `index.html` — Main website file
+- `resume.pdf` — Linked resume
+- `headshot.jpg` — Personal headshot
+- `project_1.png` to `project_6.png` — Project images
+- `README.md` — This file
 
-## Publish
-1. New GitHub repo
-2. Upload all files
-3. Settings → Pages → Deploy from a branch → `main` /root
+## 🌐 Publishing to GitHub Pages
+
+1. Create a new GitHub repository (e.g., `thomasanderson-portfolio`).
+2. Upload all these files into the main branch.
+3. In repository settings → Pages → select:
+   - **Source:** Deploy from `main` branch
+   - **Folder:** `/ (root)`
+4. Save. Your site will be live at:
+   `https://<yourusername>.github.io/thomasanderson-portfolio/`
+
