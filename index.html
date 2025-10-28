@@ -7,6 +7,7 @@
 <title>Thomas Anderson — Portfolio</title>
 <style>
   :root { --navy1:#0a1128; --navy2:#001f4d; --text:#eaeaea; --muted:#9cb3d9; --cyan:#2EA8FF; --cyan2:#4CC3FF; --card:#0e1633; }
+  * { box-sizing: border-box; }
   body { margin:0; background:var(--navy1); color:var(--text); font-family:'Segoe UI', Roboto, sans-serif; }
   header { background:linear-gradient(90deg,var(--navy1),var(--navy2)); padding:1rem 2rem; position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; }
   header .brand { font-weight:600; }
@@ -22,8 +23,8 @@
   .card { background:var(--card); border-radius:10px; padding:1.2rem; box-shadow:0 0 12px rgba(0,0,0,.35); margin-bottom:1.4rem; }
   /* About */
   .about { display:flex; flex-wrap:wrap; gap:1.6rem; align-items:center; }
-  .about .photo { flex:0 0 240px; display:flex; justify-content:center; }
-  .about .photo img { width:240px; height:auto; border-radius:0; }
+  .about .photo { flex:0 0 260px; display:flex; justify-content:center; }
+  .about .photo img { width:260px; height:auto; border-radius:0; object-fit:cover; }
   .about .text { flex:1 1 300px; min-width:260px; }
   /* Projects */
   .project h3 { margin-top:0; }
@@ -31,15 +32,18 @@
   .summary { color:var(--text); }
   .toggle-link { color:var(--cyan); text-decoration:none; font-weight:600; display:inline-block; margin:.35rem 0; }
   .toggle-link:hover { color:var(--cyan2); }
-  .details[hidden] { display:none; }
+  /* Animated details */
+  .details { transition: height .3s ease; }
+  .details-inner { padding-top:.5rem; }
   /* Carousel */
   .carousel { position:relative; overflow:hidden; border-radius:8px; background:#071024; margin-bottom:.8rem; }
-  .carousel .track { display:flex; transition:transform .35s ease; }
-  .carousel .slide { min-width:100%; flex:0 0 100%; }
-  .carousel img { width:100%; height:auto; display:block; }
-  .carousel .nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.45); color:#fff; border:none; padding:.2rem .6rem; border-radius:4px; cursor:pointer; }
+  .carousel .track { display:flex; width:100%; transition: transform .35s ease; }
+  .carousel .slide { flex:0 0 100%; min-width:100%; display:flex; align-items:center; justify-content:center; }
+  .carousel .slide img { width:100%; height:auto; object-fit:contain; display:block; }
+  .carousel .nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.5); color:#fff; border:none; padding:.25rem .6rem; border-radius:4px; cursor:pointer; }
   .carousel .prev { left:8px; } .carousel .next { right:8px; }
   footer { text-align:center; padding:2rem 1rem; color:var(--muted); background:#000914; margin-top:2rem; }
+  @media (max-width:720px) { .about .photo { flex-basis:100%; } .about .text { flex-basis:100%; } }
 </style>
 </head>
 <body>
@@ -78,9 +82,10 @@
       <h3>Autonomous Drone Project <span class="badge">In Progress</span></h3>
       
     <p class="summary">Modifying a hobby FPV drone to run ArduPilot + ROS for autonomous navigation with onboard sensing and simulation.</p>
-    <a href="#!" class="toggle-link" data-target="p1" onclick="toggleDetails('p1', this)">▼ Show More</a>
-    <div id="p1" class="details" hidden>
-      
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d1', this)">▼ Show More</a>
+    <div id="d1" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
 <strong>Project Overview</strong><br>
 Self-directed, ongoing project to develop practical skills in autonomous systems by modifying a hobby-grade FPV drone to operate with ArduPilot and ROS-based control software. The objective is to achieve autonomous navigation and obstacle avoidance using onboard sensors and simulation environments.
 <br><br>
@@ -101,8 +106,6 @@ Self-directed, ongoing project to develop practical skills in autonomous systems
   <li>Autonomous navigation and control systems</li>
 </ul>
 
-      <div style="margin-top:10px">
-        <a href="#!" class="toggle-link" data-target="p1" onclick="toggleDetails('p1', this)">▲ Show Less</a>
       </div>
     </div>
     
@@ -112,9 +115,10 @@ Self-directed, ongoing project to develop practical skills in autonomous systems
       <h3>CubeSat ADCS Development (Capstone) <span class="badge">In Progress</span></h3>
       
     <p class="summary">Reusable 3‑axis ADCS stack (NDI + MEKF) for Utah Tech’s imaging CubeSat with high‑fidelity MATLAB/Simulink simulation.</p>
-    <a href="#!" class="toggle-link" data-target="p2" onclick="toggleDetails('p2', this)">▼ Show More</a>
-    <div id="p2" class="details" hidden>
-      
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d2', this)">▼ Show More</a>
+    <div id="d2" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
 <strong>Project Overview</strong><br>
 Ongoing senior capstone project focused on developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission. The system provides 3-axis attitude control and estimation capabilities designed for reuse across future student-built satellites.
 <br><br>
@@ -141,8 +145,6 @@ Ongoing senior capstone project focused on developing a modular Attitude Determi
   <li>Spacecraft dynamics and orbital mechanics</li>
 </ul>
 
-      <div style="margin-top:10px">
-        <a href="#!" class="toggle-link" data-target="p2" onclick="toggleDetails('p2', this)">▲ Show Less</a>
       </div>
     </div>
     
@@ -158,9 +160,10 @@ Ongoing senior capstone project focused on developing a modular Attitude Determi
     
       
     <p class="summary">Implemented RRT* path planning and a full MATLAB autopilot stack; validated in simulation and flight.</p>
-    <a href="#!" class="toggle-link" data-target="p3" onclick="toggleDetails('p3', this)">▼ Show More</a>
-    <div id="p3" class="details" hidden>
-      
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d3', this)">▼ Show More</a>
+    <div id="d3" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
 <strong>Project Overview</strong><br>
 Designed and implemented a complete autopilot stack for autonomous vehicles, with particular focus on advanced path planning algorithms.
 <br><br>
@@ -192,8 +195,6 @@ Designed and implemented a complete autopilot stack for autonomous vehicles, wit
   <li>Real-time system performance analysis</li>
 </ul>
 
-      <div style="margin-top:10px">
-        <a href="#!" class="toggle-link" data-target="p3" onclick="toggleDetails('p3', this)">▲ Show Less</a>
       </div>
     </div>
     
@@ -214,9 +215,10 @@ Designed and implemented a complete autopilot stack for autonomous vehicles, wit
     
       
     <p class="summary">Electric propulsion system for pedal boats; led waterproof UI/UX mechanical design and integration.</p>
-    <a href="#!" class="toggle-link" data-target="p4" onclick="toggleDetails('p4', this)">▼ Show More</a>
-    <div id="p4" class="details" hidden>
-      
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d4', this)">▼ Show More</a>
+    <div id="d4" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
 <strong>My Role & Contributions</strong>
 <ul>
   <li>Led UI/UX mechanical design for the control system, creating waterproof housings (IP28-rated) for electronic components</li>
@@ -233,8 +235,6 @@ Designed and implemented a complete autopilot stack for autonomous vehicles, wit
   <li>Applied fabrication and waterproofing techniques to ensure reliability in aquatic environments</li>
 </ul>
 
-      <div style="margin-top:10px">
-        <a href="#!" class="toggle-link" data-target="p4" onclick="toggleDetails('p4', this)">▲ Show Less</a>
       </div>
     </div>
     
@@ -251,15 +251,14 @@ Designed and implemented a complete autopilot stack for autonomous vehicles, wit
     
       
     <p class="summary">Arduino + IoT Hall‑effect scoring system for a water‑cannon game used by 400+ attendees.</p>
-    <a href="#!" class="toggle-link" data-target="p5" onclick="toggleDetails('p5', this)">▼ Show More</a>
-    <div id="p5" class="details" hidden>
-      
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d5', this)">▼ Show More</a>
+    <div id="d5" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
 Developed a Hall effect sensor system to track scoring in a water cannon game; integrated multiple sensors with Arduino and IoT for real-time scoreboard updates; played by over 400 attendees in a STEM outreach event.
 <br><br>
 <strong>Skills:</strong> Arduino · Sensor Calibration · Internet of Things (IoT) · SOLIDWORKS · 3D Printing
 
-      <div style="margin-top:10px">
-        <a href="#!" class="toggle-link" data-target="p5" onclick="toggleDetails('p5', this)">▲ Show Less</a>
       </div>
     </div>
     
@@ -279,13 +278,12 @@ Developed a Hall effect sensor system to track scoring in a water cannon game; i
     
       
     <p class="summary">Laser‑controlled gate mechanism (Arduino + SolidWorks + laser cutting) showcased at a STEM outreach event.</p>
-    <a href="#!" class="toggle-link" data-target="p6" onclick="toggleDetails('p6', this)">▼ Show More</a>
-    <div id="p6" class="details" hidden>
-      
+    <a href="#!" class="toggle-link" onclick="toggleDetails('d6', this)">▼ Show More</a>
+    <div id="d6" class="details" data-open="false" style="overflow:hidden; height:0px;">
+      <div class="details-inner">
+        
 Designed and built a laser-controlled gate using an Arduino, SolidWorks, and laser cutting for a bridge mechanism; played by over 300 attendees in a STEM outreach event.
 
-      <div style="margin-top:10px">
-        <a href="#!" class="toggle-link" data-target="p6" onclick="toggleDetails('p6', this)">▲ Show Less</a>
       </div>
     </div>
     
@@ -334,32 +332,46 @@ Designed and built a laser-controlled gate using an Arduino, SolidWorks, and las
 <footer>© Thomas Anderson</footer>
 
 <script>
-// Collapsible details
-function toggleDetails(id, el){
-  const block = document.getElementById(id);
-  const isHidden = block.hasAttribute('hidden');
-  if(isHidden){ block.removeAttribute('hidden'); el.textContent = '▲ Show Less'; }
-  else { block.setAttribute('hidden',''); el.textContent = '▼ Show More'; }
+// ----- Expandable details with 0.3s animation -----
+function toggleDetails(id, link) {
+  const container = document.getElementById(id);
+  const isOpen = container.getAttribute('data-open') === 'true';
+  const inner = container.querySelector('.details-inner');
+  if (!isOpen) {
+    const target = inner.scrollHeight;
+    container.style.height = target + 'px';
+    container.setAttribute('data-open','true');
+    link.textContent = '▲ Show Less';
+  } else {
+    container.style.height = '0px';
+    container.setAttribute('data-open','false');
+    link.textContent = '▼ Show More';
+  }
 }
+window.addEventListener('resize', () => {
+  // keep height in sync when open
+  document.querySelectorAll('.details[data-open="true"]').forEach(el => {
+    const inner = el.querySelector('.details-inner');
+    el.style.height = inner.scrollHeight + 'px';
+  });
+});
 
-// True carousel
-function getIndex(car){ return parseInt(car.getAttribute('data-index')||'0',10); }
-function setIndex(car, i){
+// ----- True horizontal carousel -----
+function getIndex(car) { return parseInt(car.getAttribute('data-index')||'0',10); }
+function setIndex(car, i) {
   const track = car.querySelector('.track');
   const slides = car.querySelectorAll('.slide');
   const max = slides.length;
-  if(max<=1) return;
-  if(i<0) i=max-1;
-  if(i>=max) i=0;
+  if (max <= 1) return;
+  if (i < 0) i = max - 1;
+  if (i >= max) i = 0;
   car.setAttribute('data-index', i.toString());
   track.style.transform = 'translateX(' + (-i*100) + '%)';
 }
-function carouselNext(id){ const car=document.getElementById(id); setIndex(car, getIndex(car)+1); }
-function carouselPrev(id){ const car=document.getElementById(id); setIndex(car, getIndex(car)-1); }
-
-// Initialize carousels to index 0
+function carouselNext(id) { const car = document.getElementById(id); setIndex(car, getIndex(car)+1); }
+function carouselPrev(id) { const car = document.getElementById(id); setIndex(car, getIndex(car)-1); }
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.carousel').forEach(function(car){ setIndex(car,0); });
+  document.querySelectorAll('.carousel').forEach(function(car){ setIndex(car, 0); });
 });
 </script>
 </body>

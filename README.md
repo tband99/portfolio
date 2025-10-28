@@ -1,13 +1,12 @@
-Thomas Anderson — Portfolio Site v7
+Thomas Anderson — Portfolio Site v8
 
-- Compact project cards with 1–2 sentence overviews
-- "Show More" text link reveals full, detailed write-ups
-- True horizontal, manual carousels (no arrows for single-image projects)
-- Deep navy theme with bright cyan accents
-- Optimized rectangular headshot
-- "Download CV (PDF)" wording
+- Compact overview + animated "Show More/Show Less" (0.3s) with full project write-ups
+- True horizontal image carousels (manual arrows, no distortion)
+- Deep navy theme with bright cyan links/buttons
+- Rectangular, centered, optimized headshot
+- "Download CV (PDF)" label
 
 Deploy:
-1) Upload files to your GitHub repo (root of main)
-2) Settings → Pages → Deploy from branch → main / (root)
+1) Create a public GitHub repo and upload all files to the root of main
+2) Settings → Pages → Deploy from a branch → main / (root)
 3) Open your site URL
