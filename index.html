@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>{{NAME}} — Portfolio</title>
+<title>Thomas Anderson — Portfolio</title>
 <meta content="Portfolio of Maya Rivalal: Computer Science Student | AI &amp; Cybersecurity Enthusiast | Python • ML • Threat Modeling" name="description"/>
 <style>
     :root {
@@ -118,8 +118,8 @@
 </nav>
 <header class="hero">
 <div class="hero-inner">
-<h1>Hi, I’m {{NAME}}</h1>
-<p class="tagline">{{TAGLINE}}</p>
+<h1>Hi, I’m Thomas Anderson</h1>
+<p class="tagline">Mechanical Engineering Student | Focused on GNC | Exploring the Future of Autonomous Flight</p>
 <div class="cta">
 <a class="btn primary" href="#projects">See Projects</a>
 <a class="btn" href="https://www.linkedin.com/in/maya-riveral/" rel="noopener" target="_blank">LinkedIn</a>
@@ -132,26 +132,264 @@
 <section id="about">
 <h2>About</h2>
 <div class="about">
-<img alt="Headshot of {{NAME}}" src="headshot.jpg"/>
-<p>{{ABOUT}}</p>
+<img alt="Headshot of Thomas Anderson" src="headshot.jpg"/>
+<p>I’m a Mechanical Engineering senior at Utah Tech University, passionate about autonomous systems, controls, and the intersection of mechanical and software design. My experience spans mechanical design, prototyping, and systems integration across aerospace, defense, and mechatronics applications. I’ve contributed to UAV development, CubeSat simulation, and cross-disciplinary engineering projects that merge modeling, algorithm development, and hands-on fabrication. My current focus is on Guidance, Navigation, and Control (GNC) and how emerging automation technologies can advance the future of flight and space systems.</p>
 </div>
 </section>
 <section id="projects">
 <h2>Projects</h2>
-<div class="projects">{{PROJECTS_HTML}}</div>
+<div class="projects">
+<div class="projects-grid">
+  <article class="project-card">
+    <img src="project_1.png" alt="Autonomous Drone Project thumbnail" class="project-thumb"/>
+    <div>
+      <h3>Autonomous Drone Project <span class="badge">In Progress</span></h3>
+      <p><strong>Overview:</strong> Self-directed project to modify a hobby-grade FPV drone to operate with ArduPilot and ROS-based control software to achieve autonomous navigation and obstacle avoidance using onboard sensors and simulation.</p>
+      <ul>
+        <li>Integrate ArduPilot firmware with ROS for high-level mission scripting and autonomous control</li>
+        <li>Develop a Gazebo-based simulation environment to safely test flight algorithms</li>
+        <li>Implement real-time obstacle detection and avoidance using onboard sensor data</li>
+        <li>Tune PID controllers for flight stability and waypoint navigation</li>
+        <li>Future: integrate computer vision for mapping and object recognition</li>
+      </ul>
+      <p><strong>Tools &amp; Skills:</strong> ROS, Gazebo, ArduPilot, PID control tuning, sensor calibration, IMU/GPS/LiDAR integration, simulation-based testing.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_2.png" alt="CubeSat ADCS Development thumbnail" class="project-thumb"/>
+    <div>
+      <h3>CubeSat ADCS Development (Capstone Project) <span class="badge">In Progress</span></h3>
+      <p><strong>Overview:</strong> Developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission, providing 3‑axis attitude control and estimation with a reusable architecture.</p>
+      <ul>
+        <li>Implementing Nonlinear Dynamic Inversion (NDI) and Multiplicative Extended Kalman Filter (MEKF) algorithms in MATLAB</li>
+        <li>Modeling spacecraft dynamics and sensor response for closed-loop simulation</li>
+        <li>Integrating IMU, magnetometer, sun sensor, and star tracker data for attitude determination</li>
+        <li>Designing/tuning control laws for reaction wheel and magnetorquer actuation</li>
+        <li>Validating via Monte Carlo simulation and 3-axis attitude testing</li>
+      </ul>
+      <p><strong>Skills &amp; Tools:</strong> MATLAB/Simulink, NDI, MEKF, sensor fusion, spacecraft dynamics, orbital mechanics.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_3.png" alt="Autonomous UAV Control and Path Planning plot" class="project-thumb"/>
+    <div>
+      <h3>Autonomous UAV Control and Path Planning</h3>
+      <p><strong>Overview:</strong> Designed and implemented a complete autopilot stack with advanced path planning.</p>
+      <ul>
+        <li>Enhanced RRT to RRT* with intelligent node selection and rewiring for shorter paths</li>
+        <li>MATLAB implementation that continuously optimizes paths and demonstrates performance in cluttered environments</li>
+        <li>Modeled vehicle dynamics in 3D; designed PID controllers for attitude/position</li>
+        <li>Built guidance, navigation, and state estimation to fuse multiple sensors</li>
+        <li>Validated in simulation and on multi‑rotor platforms</li>
+      </ul>
+      <p><strong>Skills:</strong> Algorithm development, control systems, sensor fusion, MATLAB, simulation &amp; testing.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_4.png" alt="Turbo Regatta propulsion system" class="project-thumb"/>
+    <div>
+      <h3>Turbo Regatta</h3>
+      <p><strong>Overview:</strong> Cross‑disciplinary project to design and build an electric propulsion system for pedal boats; competed at Engineering Design Day.</p>
+      <ul>
+        <li>Led waterproof UI/UX mechanical design and IP28‑rated enclosures</li>
+        <li>Integrated physical controls with digital interfaces; managed wiring and housings</li>
+        <li>Delivered variable speed control and full maneuverability within budget and constraints</li>
+      </ul>
+      <p><strong>Skills:</strong> Mechanical design, fabrication, waterproofing, cross‑functional collaboration.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_5.png" alt="Carnival Game with IoT scoreboard" class="project-thumb"/>
+    <div>
+      <h3>Carnival Game</h3>
+      <p><strong>Overview:</strong> Built a Hall‑effect sensor scoring system for a water‑cannon game; integrated with Arduino and IoT for real‑time scoreboard updates used by 400+ attendees.</p>
+      <p><strong>Skills:</strong> Arduino, sensor calibration, IoT, SOLIDWORKS, 3D printing.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_6.png" alt="Mechatronic miniature golf green" class="project-thumb"/>
+    <div>
+      <h3>Mechatronic Miniature Golf Green</h3>
+      <p><strong>Overview:</strong> Designed and built a laser‑controlled gate mechanism using Arduino, SolidWorks, and laser cutting; showcased at a STEM outreach event for 300+ attendees.</p>
+    </div>
+  </article>
+</div>
+</div>
 </section>
 <section id="experience">
   <h2>Experience</h2>
-  <div class="projects">{{EXPERIENCE_HTML}}</div></section>
-<section id="education"><h2>Education</h2><p>{{EDUCATION}}</p></section>
-<section id="skills"><h2>Skills</h2><ul>{{SKILLS_HTML}}</ul></section>
-<section aria-labelledby="contact-heading" class="contact" id="contact"><h2 id="contact-heading">Contact</h2><p>Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> {{LINKEDIN_LINE}}</p>{{RESUME_LINE}}</section>
+  <div class="projects">
+<div class="timeline">
+  <div class="item">
+    <h4>UAV Technician Intern — Vector <span class="time">Jul 2025 – Aug 2025 · Draper, UT</span></h4>
+    <ul>
+      <li>Assembled and integrated military‑grade quadcopter UAV systems; supported prototype → production transition</li>
+      <li>Conducted flight testing and post‑flight analysis; documented procedures for iteration</li>
+      <li>Collaborated with engineering teams to refine prototypes and streamline production</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Mechanical Engineering Intern — Wilson Connectivity <span class="time">May 2023 – Jan 2025 · St. George, UT</span></h4>
+    <ul>
+      <li>Designed durable antenna mounts with SolidWorks and built test fixtures for PCB/boosters</li>
+      <li>Improved testing efficiency and accuracy; used 3D printing and CNC machining</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Race Timer — Brooksee <span class="time">Mar 2022 – Nov 2024</span></h4>
+    <ul>
+      <li>Operated RFID/BLE race timing systems and large‑scale IoT deployments</li>
+      <li>Supported migration from passive RFID to BLE with custom antennas</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Materials Intern — RAM Aviation Space &amp; Defense <span class="time">May 2022 – Aug 2022 · St. George, UT</span></h4>
+    <ul>
+      <li>Optimized pneumatics assembly area and contributed to cost‑reduction initiatives</li>
+      <li>Assembled an average of 10 kits daily; collaborated closely with manufacturing engineers</li>
+    </ul>
+  </div>
+</div>
+</div></section>
+<section id="education"><h2>Education</h2><p>B.S. Mechanical Engineering — Utah Tech University, Expected May 2026</p></section>
+<section id="skills"><h2>Skills</h2><ul>
+<ul class="skills-list">
+  <li><strong>Design & Simulation:</strong> SolidWorks, OnShape, Fusion 360, ANSYS, ROS</li>
+  <li><strong>Fabrication:</strong> Laser Cutting, 3D Printing, CNC Machining/Operations, Manual Mill, Manual Lathe, Soldering, Welding</li>
+  <li><strong>Programming:</strong> MATLAB, Arduino</li>
+</ul>
+</ul></section>
+<section aria-labelledby="contact-heading" class="contact" id="contact"><h2 id="contact-heading">Contact</h2><p>Email: <a href="mailto:tband99@gmail.com">tband99@gmail.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/thomas-b-anderson" target="_blank" rel="noopener">linkedin.com/in/thomas-b-anderson</a></p>Résumé: <a href="resume.pdf" target="_blank" rel="noopener">Download PDF</a></section>
 </main>
 <footer style="max-width: var(--maxw); margin: 0 auto; padding: 2rem 1rem; color: var(--muted);">
-<small>© {{NAME}}</small>
+<small>© Thomas Anderson</small>
 </footer>
 
 
-<!-- Placeholders: {{NAME}}, {{TAGLINE}}, {{ABOUT}}, {{PROJECTS_HTML}}, {{EXPERIENCE_HTML}}, {{EDUCATION}}, {{SKILLS_HTML}}, {{EMAIL}}, {{LINKEDIN_LINE}}, {{RESUME_LINE}}, {{RESUME_BUTTON}} -->
+<!-- Placeholders: Thomas Anderson, Mechanical Engineering Student | Focused on GNC | Exploring the Future of Autonomous Flight, I’m a Mechanical Engineering senior at Utah Tech University, passionate about autonomous systems, controls, and the intersection of mechanical and software design. My experience spans mechanical design, prototyping, and systems integration across aerospace, defense, and mechatronics applications. I’ve contributed to UAV development, CubeSat simulation, and cross-disciplinary engineering projects that merge modeling, algorithm development, and hands-on fabrication. My current focus is on Guidance, Navigation, and Control (GNC) and how emerging automation technologies can advance the future of flight and space systems., 
+<div class="projects-grid">
+  <article class="project-card">
+    <img src="project_1.png" alt="Autonomous Drone Project thumbnail" class="project-thumb"/>
+    <div>
+      <h3>Autonomous Drone Project <span class="badge">In Progress</span></h3>
+      <p><strong>Overview:</strong> Self-directed project to modify a hobby-grade FPV drone to operate with ArduPilot and ROS-based control software to achieve autonomous navigation and obstacle avoidance using onboard sensors and simulation.</p>
+      <ul>
+        <li>Integrate ArduPilot firmware with ROS for high-level mission scripting and autonomous control</li>
+        <li>Develop a Gazebo-based simulation environment to safely test flight algorithms</li>
+        <li>Implement real-time obstacle detection and avoidance using onboard sensor data</li>
+        <li>Tune PID controllers for flight stability and waypoint navigation</li>
+        <li>Future: integrate computer vision for mapping and object recognition</li>
+      </ul>
+      <p><strong>Tools &amp; Skills:</strong> ROS, Gazebo, ArduPilot, PID control tuning, sensor calibration, IMU/GPS/LiDAR integration, simulation-based testing.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_2.png" alt="CubeSat ADCS Development thumbnail" class="project-thumb"/>
+    <div>
+      <h3>CubeSat ADCS Development (Capstone Project) <span class="badge">In Progress</span></h3>
+      <p><strong>Overview:</strong> Developing a modular Attitude Determination and Control System (ADCS) for Utah Tech’s CubeSat imaging mission, providing 3‑axis attitude control and estimation with a reusable architecture.</p>
+      <ul>
+        <li>Implementing Nonlinear Dynamic Inversion (NDI) and Multiplicative Extended Kalman Filter (MEKF) algorithms in MATLAB</li>
+        <li>Modeling spacecraft dynamics and sensor response for closed-loop simulation</li>
+        <li>Integrating IMU, magnetometer, sun sensor, and star tracker data for attitude determination</li>
+        <li>Designing/tuning control laws for reaction wheel and magnetorquer actuation</li>
+        <li>Validating via Monte Carlo simulation and 3-axis attitude testing</li>
+      </ul>
+      <p><strong>Skills &amp; Tools:</strong> MATLAB/Simulink, NDI, MEKF, sensor fusion, spacecraft dynamics, orbital mechanics.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_3.png" alt="Autonomous UAV Control and Path Planning plot" class="project-thumb"/>
+    <div>
+      <h3>Autonomous UAV Control and Path Planning</h3>
+      <p><strong>Overview:</strong> Designed and implemented a complete autopilot stack with advanced path planning.</p>
+      <ul>
+        <li>Enhanced RRT to RRT* with intelligent node selection and rewiring for shorter paths</li>
+        <li>MATLAB implementation that continuously optimizes paths and demonstrates performance in cluttered environments</li>
+        <li>Modeled vehicle dynamics in 3D; designed PID controllers for attitude/position</li>
+        <li>Built guidance, navigation, and state estimation to fuse multiple sensors</li>
+        <li>Validated in simulation and on multi‑rotor platforms</li>
+      </ul>
+      <p><strong>Skills:</strong> Algorithm development, control systems, sensor fusion, MATLAB, simulation &amp; testing.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_4.png" alt="Turbo Regatta propulsion system" class="project-thumb"/>
+    <div>
+      <h3>Turbo Regatta</h3>
+      <p><strong>Overview:</strong> Cross‑disciplinary project to design and build an electric propulsion system for pedal boats; competed at Engineering Design Day.</p>
+      <ul>
+        <li>Led waterproof UI/UX mechanical design and IP28‑rated enclosures</li>
+        <li>Integrated physical controls with digital interfaces; managed wiring and housings</li>
+        <li>Delivered variable speed control and full maneuverability within budget and constraints</li>
+      </ul>
+      <p><strong>Skills:</strong> Mechanical design, fabrication, waterproofing, cross‑functional collaboration.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_5.png" alt="Carnival Game with IoT scoreboard" class="project-thumb"/>
+    <div>
+      <h3>Carnival Game</h3>
+      <p><strong>Overview:</strong> Built a Hall‑effect sensor scoring system for a water‑cannon game; integrated with Arduino and IoT for real‑time scoreboard updates used by 400+ attendees.</p>
+      <p><strong>Skills:</strong> Arduino, sensor calibration, IoT, SOLIDWORKS, 3D printing.</p>
+    </div>
+  </article>
+
+  <article class="project-card">
+    <img src="project_6.png" alt="Mechatronic miniature golf green" class="project-thumb"/>
+    <div>
+      <h3>Mechatronic Miniature Golf Green</h3>
+      <p><strong>Overview:</strong> Designed and built a laser‑controlled gate mechanism using Arduino, SolidWorks, and laser cutting; showcased at a STEM outreach event for 300+ attendees.</p>
+    </div>
+  </article>
+</div>
+, 
+<div class="timeline">
+  <div class="item">
+    <h4>UAV Technician Intern — Vector <span class="time">Jul 2025 – Aug 2025 · Draper, UT</span></h4>
+    <ul>
+      <li>Assembled and integrated military‑grade quadcopter UAV systems; supported prototype → production transition</li>
+      <li>Conducted flight testing and post‑flight analysis; documented procedures for iteration</li>
+      <li>Collaborated with engineering teams to refine prototypes and streamline production</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Mechanical Engineering Intern — Wilson Connectivity <span class="time">May 2023 – Jan 2025 · St. George, UT</span></h4>
+    <ul>
+      <li>Designed durable antenna mounts with SolidWorks and built test fixtures for PCB/boosters</li>
+      <li>Improved testing efficiency and accuracy; used 3D printing and CNC machining</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Race Timer — Brooksee <span class="time">Mar 2022 – Nov 2024</span></h4>
+    <ul>
+      <li>Operated RFID/BLE race timing systems and large‑scale IoT deployments</li>
+      <li>Supported migration from passive RFID to BLE with custom antennas</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Materials Intern — RAM Aviation Space &amp; Defense <span class="time">May 2022 – Aug 2022 · St. George, UT</span></h4>
+    <ul>
+      <li>Optimized pneumatics assembly area and contributed to cost‑reduction initiatives</li>
+      <li>Assembled an average of 10 kits daily; collaborated closely with manufacturing engineers</li>
+    </ul>
+  </div>
+</div>
+, B.S. Mechanical Engineering — Utah Tech University, Expected May 2026, 
+<ul class="skills-list">
+  <li><strong>Design & Simulation:</strong> SolidWorks, OnShape, Fusion 360, ANSYS, ROS</li>
+  <li><strong>Fabrication:</strong> Laser Cutting, 3D Printing, CNC Machining/Operations, Manual Mill, Manual Lathe, Soldering, Welding</li>
+  <li><strong>Programming:</strong> MATLAB, Arduino</li>
+</ul>
+, tband99@gmail.com, · LinkedIn: <a href="https://www.linkedin.com/in/thomas-b-anderson" target="_blank" rel="noopener">linkedin.com/in/thomas-b-anderson</a>, Résumé: <a href="resume.pdf" target="_blank" rel="noopener">Download PDF</a>, <a href="resume.pdf" class="btn" target="_blank" rel="noopener">View Résumé (PDF)</a> -->
 </body>
 </html>
